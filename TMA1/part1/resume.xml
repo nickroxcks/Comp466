@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="resume.xsl" ?>
+<resume>
+    <general_info>
+        <name>Nicholas Serrano</name>
+        <section_heading>Contact Info</section_heading>
+        <address>10880 Malibu Point, California</address>
+        <phone_number>(209) 999-9999</phone_number>
+        <email>nserrano@ualberta.ca</email>
+        <personal_website_link>nserrano.com</personal_website_link>
+    </general_info>
+
+    <education>
+        <section_heading>Education</section_heading>
+        <program_name>BSC Computer Engineering Co-op</program_name>
+        <university_name>University of Alberta</university_name>
+        <date_attended>September 2016 - April 2021</date_attended>
+        <course_load>
+            <course_load_content>Computer Coursework: Algorithms and Data structures, Operating Systems, Artificial Intelligence, Networks, Mobile App Design, Project Management</course_load_content>
+        </course_load>
+        <course_load>
+            <course_load_content>Electrical Coursework: Computer Architecture, Circuits, Logic Design (VHDL)</course_load_content>
+        </course_load>
+    </education>
+
+    <work_experience>
+        <section_heading>Work Experience</section_heading>
+            
+            <job>
+                <position>Computer Engineering Intern</position>
+                <employer>ABC Company</employer>
+                <date_attended>May 2020 - Dec 2020</date_attended>
+                <work_experience_info>
+                        <work_experience_content>Reduced the need for operators to be present on site by creating an internal web app that provided users with an intuitive UI to view live industrial historian data across all mine sites managed by ABC</work_experience_content>
+                </work_experience_info>
+                <work_experience_info>
+                    <work_experience_content>Programmed and troubleshooted various PLC’s (LD) used for many industrial tasks such as train loading, ash analyzing, toxin analysis, and various other applications</work_experience_content>
+                </work_experience_info>
+                <work_experience_info>
+                    <work_experience_content>Leveraged Knowledge: Industrial Processing, Web Development, PLC Programming, Historian Databases, Network Security, SQL, PHP, JavaScript, Python</work_experience_content>
+                </work_experience_info>
+            </job>
+
+            <job>
+                <position>Software Engineering Intern</position>
+                <employer>DEF Company</employer>
+                <date_attended>May 2019 - Sept 2019</date_attended>
+                <work_experience_info>
+                    <work_experience_content>Removed the need for external companies to directly call DEF technicians about channel alarm data by utilizing SNMP traps from internal network probes to allow alarm trap data to be delivered to the external companies in the form of a front-end web application</work_experience_content>
+                </work_experience_info>
+                <work_experience_info>
+                    <work_experience_content>Created a live web feed that displays incorrect configuration settings for different encoders and devices in the DEF network, removing the need for technicians to manually find errors</work_experience_content>
+                </work_experience_info>
+                <work_experience_info>
+                    <work_experience_content>Developed various scripts and web applications to reduce the workload of colleagues</work_experience_content>
+                </work_experience_info>
+                <work_experience_info>
+                    <work_experience_content>Leveraged Knowledge: Full Stack Development, Network Architecture, C++, C#, Python, JavaScript, Angular, Oracle Databases, Remote Testing with Docker Containers and New Relic</work_experience_content>
+                </work_experience_info>
+                
+            </job>
+
+
+    </work_experience>
+
+    <skills>
+        <section_heading>Skills</section_heading>
+            <skill_info>
+                <skill_content>Proficient: C/C++, Python, Java, SQL, C#, Git, VHDL, Unix, Unit Testing, Operating System Design, FPGA’s</skill_content>
+            </skill_info>
+            <skill_info>
+                <skill_content>Familiar: JavaScript, Html/CSS, Angular, Docker, New Relic, Perl, Basic, Network Architecture, MATLAB</skill_content>
+            </skill_info>         
+    </skills>
+</resume>

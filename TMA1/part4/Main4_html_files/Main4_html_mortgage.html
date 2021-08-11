@@ -1,0 +1,28 @@
+<div class="main2-banner-title">Mortgage Calculator</div>
+<div id="main2-banner-content">
+    <form onsubmit="return false">
+        <!-- <form onsubmit="return false" onclick="clickSubmitWeight()"> -->
+        <label for="inputWeight">Enter Mortgage :</label>
+        <input type="text" id="inputMortgage" name="inputMortgage">&nbsp;$<br>
+        <label for="inputInterest">Enter interest %:</label>
+        <input type="text" id="inputInterest" name="inputInterest">&nbsp;%<br>
+        <label for="inputPeriod">Enter Amortization Period:</label>
+        <input type="text" id="inputPeriod" name="inputPeriod">&nbsp;Years<br>
+        <label for="inputFrequency">Enter Payment Frequency:</label>
+        <select id="frequencyUnit" value="yearly" onclick="pressMortgageKey()">
+            <option value="semiMonthly">semi-monthly</option>
+            <option value="monthly">monthly</option>
+            <option value="yearly">yearly</option>
+        </select><br>
+    </form>
+    <p class="bold main2-banner-content-text-centered">Mortgage Summary: </p>
+    <div id="mortgageResults" class="main2-banner-content-text-centered">
+
+
+
+    </div>
+
+
+
+
+</div>

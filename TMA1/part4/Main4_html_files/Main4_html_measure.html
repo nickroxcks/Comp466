@@ -1,0 +1,68 @@
+<div class="main2-banner-title">Measurement Converter</div>
+<div id="main2-banner-content">
+    <p>Weights:</p>
+    <form onsubmit="return false">
+        <label for="inputWeight">Enter Weight:</label>
+        <input type="text" id="inputWeight" name="inputWeight">
+        <select id="weightUnit" value="kg" onclick="pressWeightKey()">
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+            <option value="mg">mg</option>
+            <option value="tonne">tonne</option>
+            <option value="lb">lb</option>
+            <option value="none">oz</option>
+        </select>
+    </form>
+    <p>Weight Conversions:</p>
+    <p id="weightResults"></p><br>
+
+    <p>Lengths:</p>
+    <form onsubmit="return false">
+        <label for="inputLength">Enter Length:</label>
+        <input type="text" id="inputLength" name="inputLength">
+        <select id="LengthUnit" value="m" onclick="pressLengthKey()">
+            <option value="km">km</option>
+            <option value="m">m</option>
+            <option value="cm">cm</option>
+            <option value="yard">yard</option>
+            <option value="feet">feet</option>
+            <option value="inch">inch</option>
+        </select>
+    </form>
+    <p>Length Conversions:</p>
+    <p id="lengthResults"></p><br>
+
+    <p>Areas:</p>
+    <form onsubmit="return false">
+        <label for="inputArea">Enter Area:</label>
+        <input type="text" id="inputArea" name="inputArea">
+        <select id="AreaUnit" value="m2" onclick="pressAreaKey()">
+            <option value="km2">square km</option>
+            <option value="m2">square m</option>
+            <option value="cm2">square cm</option>
+            <option value="yard2">square yard</option>
+            <option value="feet2">square feet</option>
+            <option value="inch2">square inch</option>
+        </select>
+    </form>
+    <p>Area Conversions:</p>
+    <p id="areaResults"></p><br>
+
+    <p>Volumes:</p>
+    <form onsubmit="return false">
+        <label for="inputVolume">Enter Volumes:</label>
+        <input type="text" id="inputVolume" name="inputVolume">
+        <select id="VolumeUnit" value="m3" onclick="pressVolumeKey()">
+            <option value="km3">cubic km</option>
+            <option value="m3">cubic m</option>
+            <option value="cm3">cubic cm</option>
+            <option value="yard3">cubic yard</option>
+            <option value="feet3">cubic feet</option>
+            <option value="inch3">cubic inch</option>
+        </select>
+    </form>
+    <p>Volume Conversions:</p>
+    <p id="volumeResults"></p><br>
+
+
+</div>

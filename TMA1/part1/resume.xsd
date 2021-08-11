@@ -1,0 +1,74 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="resume">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="general_info">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element type="xs:string" name="section_heading"/>
+              <xs:element type="xs:string" name="address"/>
+              <xs:element type="xs:string" name="phone_number"/>
+              <xs:element type="xs:string" name="email"/>
+              <xs:element type="xs:string" name="personal_website_link"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="education">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="section_heading"/>
+              <xs:element type="xs:string" name="program_name"/>
+              <xs:element type="xs:string" name="university_name"/>
+              <xs:element type="xs:string" name="date_attended"/>
+              <xs:element name="course_load" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="course_load_content"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="work_experience">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="section_heading"/>
+              <xs:element name="job" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="position"/>
+                    <xs:element type="xs:string" name="employer"/>
+                    <xs:element type="xs:string" name="date_attended"/>
+                    <xs:element name="work_experience_info" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="work_experience_content"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="skills">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="section_heading"/>
+              <xs:element name="skill_info" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="skill_content"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
