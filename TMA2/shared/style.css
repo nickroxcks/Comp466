@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css?family=Oxygen");
 
 /* All Basic HTML Elements*/
 body {
-	font-family: 'Roboto Slab', sans-serif;
+	font-family: 'Oxygen', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -66,10 +67,16 @@ ul {
 .main2-banner-title {
     font-size: 24px;
     text-align: center;
-
-
 }
+.loginTitle{
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 50px;
 
+    font-family: 'Oxygen',sans-serif,sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
 #main > .main2_center {
     padding-top: 100px;
     padding-left: 100px;
@@ -117,15 +124,6 @@ ul .nav_dropdown {
     color: #FFF;
 }
 
-/*Part 3 Main*/
-.main3-banner-content-canvas{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    width: auto;
-    height: auto;
-  }
 /* Header */
 #header {
     display: -moz-flex;
@@ -133,9 +131,33 @@ ul .nav_dropdown {
     display: -ms-flex;
     position: relative;
     height: 104px;
-    background-color: #008080;
+    background-color: #24252d;
     margin: -100px -100px 30px -100px;
 }
+
+.loginLogo{
+/*font-family: 'Oxygen',sans-serif,sans-serif;*/
+
+font-family: 'proxima-nova', sans-serif;
+
+        font-weight: 700;
+        font-size: 50px;
+        text-align: center;
+        color: #004687;
+}
+.loginHeader{
+    position: relative;
+    height: 70px;
+    line-height: 70px;
+    background-color: #004687;
+    margin: -100px -100px 30px -100px;
+    font-family: 'Oxygen',sans-serif,sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
 
 #header .logo {
     text-align: center;
@@ -232,6 +254,84 @@ ul .nav_dropdown {
     color: #008080;
     padding-left: 50px;
 }
+
+/*Login utils*/
+
+.loginForm {
+    margin: auto;
+    width: 20%;
+
+    background-color: white;
+    border-radius: 25px;
+    margin-top: 50px;
+    height: 500px;
+    }
+.loginText{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Oxygen',sans-serif,sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+.buttonContainer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loginButton {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #004687;
+    border: solid 1px transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    margin-top: 20px;
+    
+  }
+.loginButton:hover{
+    background-color: #00BFFF;
+}
+  .lds-dual-ring {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-top: 30px;
+    
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #1c89ff;
+    border-color: #1c89ff transparent #1c89ff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    display: flex;
+    justify-content: center;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
 
 /* Other */
 
