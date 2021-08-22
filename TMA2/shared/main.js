@@ -7,9 +7,72 @@ function start() {
         "click", clickCreateAccountButton, false);
 } // end function start
 
-
+function selectApplication() {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("main").innerHTML = this.responseText;
+            document.getElementById("applicationPartOneButton").addEventListener(
+                "click", clickApplicationPartOneButton, false);
+            document.getElementById("applicationPartTwoButton").addEventListener(
+                "click", clickApplicationPartTwoButton, false);
+        }
+    };
+    xmlhttp.open("GET", "shared/selectApplication.html", true);
+    xmlhttp.send();
+}
 function clickLoginButton() {
-    document.getElementById("lds-dual-ring").style.display = "inline-block";
+
+    var name = document.getElementById("loginUsername").value;
+    var password = document.getElementById("loginPassword").value;
+    if (name == "") {
+        document.getElementById("loginUsernameLabel").innerHTML = "<em class=\"redText\">*</em>Username:";
+        document.getElementById("loginNotice").innerHTML = "<em class=\"redText\">Please enter Username</em>";
+        return;
+    }
+    if (password == "") {
+        document.getElementById("loginPasswordLabel").innerHTML = "<em class=\"redText\">*</em>Password:";
+        document.getElementById("loginNotice").innerHTML = "<em class=\"redText\">Please enter Password</em>";
+        return;
+    }
+    else {
+        document.getElementById("lds-dual-ring").style.display = "inline-block";
+        //document.getElementById("lds-dual-ring").style.display = "block"; //make load wheel visible
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                //document.getElementById("lds-dual-ring").style.display = "none"; //make load wheel invisible
+                if (this.responseText != "") {
+                    console.log("login success");
+                    var tmpArray = this.responseText.split(',');
+                    console.log(tmpArray[0]);
+                    console.log(tmpArray[1]);
+                    selectApplication();
+                }
+                else {
+                    console.log("yikes");
+                }
+                document.getElementById("lds-dual-ring").style.display = "none";
+                /*
+                document.getElementById("createAccountNotice").innerHTML = "<em class=\"greenText\">Account Created!</em>";
+                document.getElementById("createUserName").value = "";
+                document.getElementById("createPassword").value = "";
+                document.getElementById("createConfirmPassword").value = "";
+                */
+                //document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "shared/checkLogin.php?name=" + name + "&password=" + password, true);
+        xmlhttp.send();
+    }
+}
+
+function clickApplicationPartOneButton(){
+
+}
+
+function clickApplicationPartTwoButton(){
+    
 }
 
 function clickCreateAccountButton() {
@@ -28,15 +91,15 @@ function clickCreateAccountButton() {
             document.getElementById("loginForm").innerHTML = this.responseText;
             document.getElementById("createNewAccountButton").addEventListener(
                 "click", clickCreateNewAccountButton, false);
-                document.getElementById("returnLoginButton").addEventListener(
-                    "click", clickReturnLoginButton, false);
+            document.getElementById("returnLoginButton").addEventListener(
+                "click", clickReturnLoginButton, false);
         }
     };
     xmlhttp.open("GET", "shared/createAccountForm.html", true);
     xmlhttp.send();
 }
 
-function clickReturnLoginButton(){
+function clickReturnLoginButton() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
