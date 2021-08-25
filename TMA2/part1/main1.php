@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: ../index.html");
+    header("location: ../login.php");
     exit;
 }
 ?>
@@ -43,7 +43,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <header id="header">
                     <div class="fas fa-bars nav_button" id="menubutton"> SimpleDev</div>
                     <div class="fas nav_button" id="BookmarkHomeButton">Home</div>
-                    <div class="fas nav_button" id="BookmarkYourBookmarksbutton">Your Bookmarks</div>
+                    <div class="fas nav_button" id="BookmarkYourBookmarksButton">Your Bookmarks</div>
+                    <div class="fas nav_button" id="BookmarkAddBookmarkButton">Add Bookmark</div>
+                    <div class="fas nav_button" id="BookmarkDeleteBookmarkButton">Edit Bookmark</div>
                 </header>
 
                 <!-- Banner -->
@@ -51,11 +53,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <!--It is here where the content presented can be updated from main2.js-->
                     <div class="main2-banner-title">Top 10 most popular Bookmarks</div>
                     <div id="main2-banner-content">
-                        <p class="main2-banner-content-text-centered">In this program, you will be introduced to some
-                            basic concepts about web development that are essential for every web developer to know.</p>
+
+
                     </div>
                     <!--End of content update-->
                 </section>
+
                 <div class="main2-banner-content-page-navigation" id="Main2-Page-Navigation">
                 </div>
 
@@ -72,7 +75,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <li><a href="">Bookmarking Service</a></li>
                         <li><a href="">Course</a></li>
                         <li><a href="">Documentation</a></li>
-                        <li><a href="">Logout</a></li>
+                        <li><a href="../shared/logout.php">Logout</a></li>
                     </ul>
                 </nav>
 

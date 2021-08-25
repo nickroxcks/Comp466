@@ -1,14 +1,16 @@
 <?php
-
+session_start();
 //$query = "Select * from names";
 $name = strval($_GET['name']);
 $password = strval($_GET['password']);
+/*
 $mysqli = new mysqli("localhost:3306","Nick","Djstpk#629!()Sql","simpledb");
 // Check connection
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
   exit();
-}
+}*/
+require_once "dbConfig.php";
 
 // Perform query
 //if ($result = $mysqli -> query("SELECT * FROM names")) {
@@ -21,8 +23,11 @@ $result = $stmt->get_result();
 
 $row = $result->fetch_array(MYSQLI_ASSOC);
 if($row){
+  $_SESSION["loggedin"] = true;
   $_SESSION["idusers"] = $row["idusers"];
   $_SESSION["username"] = $row["username"];
+  //header('location: selectApplication.php');
+  //exit();
   echo $row["idusers"],",", $row["username"];
 }
 else{

@@ -1,0 +1,216 @@
+<Lesson>
+
+    <Unit1>
+        <Page>
+            <Title>Unit 1: HTML5, What is it, and how is it used?</Title>
+            <Paragraph>HTML5 is a markup language that specifies the structure and content of documents that are displayed in web browsers.</Paragraph>
+            <Paragraph>Think of it as a template that sets the layout for your website. For instance, SimpleDev follows a very simple layout. 
+                It has a naviation bar on the top of the page, a sidebar on the left side of the page, and a container in the middle that displays content to the user. 
+                This format is all layed out in the HTML5 used for this website.</Paragraph>
+            <Paragraph>It also allows you to display, that is "markup", specific content to the user. This includes text, images, videos, and all sorts of content. 
+            Everything you are reading in SimpleDev is being "marked up" by the html, allowing you to view the content.</Paragraph>
+            <Paragraph>Now that we understand the basic uses of html, lets take a look at how to write it.</Paragraph>
+        </Page>
+
+        <Page>
+            <Title>Unit 1: Basic HTML elements Part 1</Title>
+            <Paragraph>To understand the basics of writing HTML, lets take a look at the following example.
+
+        </Page>
+        &lt;/ELEMENT&gt;
+
+
+    </Unit1>
+
+
+
+
+    <Quiz>
+        <Unit1>
+            <MultipleChoice>
+                <Question>Which of the following best describes HTML?</Question>
+                <A>A programming language that allows programmers to add dynamic functionality to their websites</A>
+                <B>A markup language that specifies the structure and content of documents that are displayed in web browsers</B>
+                <C>A language to give your website style</C>
+                <D>A text editor</D>
+                <Answer>B</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following is NOT a defined HTML element?</Question>
+                <A>name</A>
+                <B>html</B>
+                <C>title</C>
+                <D>body</D>
+                <Answer>A</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following HTML elements is used to place information about the HTML5 document, such as the character set, linked files, and the title of a webpage?</Question>
+                <A>ul</A>
+                <B>p</B>
+                <C>body</C>
+                <D>head</D>
+                <Answer>D</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following HTML elements defines metadata related to the document?</Question>
+                <A>meta</A>
+                <B>body </B>
+                <C>p</C>
+                <D>title</D>
+                <Answer>A</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following is the correct way to add a comment in HTML?</Question>
+                <A>//This is a comment</A>
+                <B>/*This is a comment*/</B>
+                <C>#This is a comment</C>
+                <D>None of the above</D>
+                <Answer>D</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>It is within this tag that the documents body content is placed</Question>
+                <A>head</A>
+                <B>p</B>
+                <C>body</C>
+                <D>none of the above</D>
+                <Answer>C</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following HTML elements defines a paragraph?</Question>
+                <A>meta</A>
+                <B>body</B>
+                <C>p</C>
+                <D>title</D>
+                <Answer>C</Answer>
+            </MultipleChoice>
+        </Unit1>
+
+        <Unit2>
+            <MultipleChoice>
+                <Question>Which of the following best describes CSS?</Question>
+                <A>A programming language that allows programmers to add dynamic functionality to their websites</A>
+                <B>A markup language that specifies the structure and content of documents that are displayed in web browsers</B>
+                <C>A language to give your website style</C>
+                <D>A text editor</D>
+                <Answer>C</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following methods can be used to embed CSS in your HTML code?</Question>
+                <A>Using the html style tag</A>
+                <B>Using an external syle sheet linked in the head of your html file</B>
+                <C>Both A and B are correct</C>
+                <D>None of the above</D>
+                <Answer>C</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following correctly describes a CSS Selector</Question>
+                <A>A selector is used to all the select the html file you wish to style</A>
+                <B>A selector is used to change the font-size of text</B>
+                <C>A Selector is used to to change the text color</C>
+                <D>A Selector allows you to target speciic HTML elements you want to style</D>
+                <Answer>D</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following is incorrect about a CSS Class</Question>
+                <A>A class allows you to apply style properties to HTML elements that are assigned the same class name</A>
+                <B>A class allows you to apply style properties to HTML elements that are assigned an ID equal to the class name</B>
+                <C>A class in CSS is written in the form: .ClassName {}</C>
+                <D>All of the above are correct</D>
+                <Answer>B</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following property value pairs will change the text color to red?</Question>
+                <A>color: red; </A>
+                <B>text: red;</B>
+                <C>textcolor: red;</C>
+                <D>backround-color: rainbow;</D>
+                <Answer>A</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following best describes JavaScript?</Question>
+                <A>A programming language that allows programmers to add dynamic functionality to their websites</A>
+                <B>A markup language that specifies the structure and content of documents that are displayed in web browsers</B>
+                <C>A language to give your website style</C>
+                <D>A text editor</D>
+                <Answer>A</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following is incorrect?</Question>
+                <A>JavaScript is often used in web development</A>
+                <B>JavaScript is a strongly typed language</B>
+                <C>JavaScript is a loosely typed language</C>
+                <D>Javascript can perform computations, manipulate html elements, and listen for user interactions</D>
+                <Answer>B</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following is an incorrect to embed JavaScript in your webpage?</Question>
+                <A>Using the HTML script tag</A>
+                <B>Using an external javascript file linked in the head of your html file</B>
+                <C>Using the HTML style tag</C>
+                <D>None of the above</D>
+                <Answer>C</Answer>
+            </MultipleChoice>
+        </Unit2>
+
+        <Unit3>
+            <MultipleChoice>
+                <Question>Which of the following best describes XML?</Question>
+                <A>A programming language that allows programmers to add dynamic functionality to their websites</A>
+                <B>A markup language that specifies the structure and content of documents that are displayed in web browsers</B>
+                <C>A language to give your website style</C>
+                <D>A language used to store and transport data</D>
+                <Answer>D</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following is correct about XML tags?</Question>
+                <A>We can name our tags whatever we wish, unlike the pre-defined tag names in HTML</A>
+                <B>Attributes can be applied to tags</B>
+                <C>Tags in XML can be nested</C>
+                <D>All of the above are correct</D>
+                <Answer>D</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the is incorrect about the XMLHttpRequest object</Question>
+                <A>A readyState property of 4 means the request is finished and response is ready</A>
+                <B>A readyState property of 3 means the request is finished and response is ready</B>
+                <C>The status property is the status number of a request</C>
+                <D>A status propery of 200 means it is OK</D>
+                <Answer>B</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following is incorrect?</Question>
+                <A>XML data an be inserted into your html files using AJAX</A>
+                <B>Every tag in XML needs a opening and end tag</B>
+                <C>XML is used the same way HTML is used</C>
+                <D>XML makes it easy to store and reuse data</D>
+                <Answer>C</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>What does AJAX stand for?</Question>
+                <A>Asynchronous JavaScript And XML</A>
+                <B>Asynchronous Java And XML</B>
+                <C>Applied JavaScript And XML</C>
+                <D>Asynchronous JavaScript And XMLHttpRequest</D>
+                <Answer>A</Answer>
+            </MultipleChoice>
+        </Unit3>
+    </Quiz>
+
+</Lesson>

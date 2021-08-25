@@ -1,3 +1,13 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: ../login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,8 +47,8 @@
             <div id="applicationForm" class="applicationForm">
                 <div class="loginTitle">Select Application</div>
                 <div>
-                    <button id="applicationPartOneButton" class="applicationBookmarkButton" href="../part1/main1.html"><a
-                            href="../part1/main1.html">Bookmarking Service</a></button>
+                    <button id="applicationPartOneButton" class="applicationBookmarkButton" href="../part1/main1.php"><a
+                            href="../part1/main1.php">Bookmarking Service</a></button>
                     <button id="applicationPartTwoButton" class="applicationCourseButton">Learning Course</button>
                     <div id="lds-dual-ring" class="lds-dual-ring" style="display: none;"></div>
                 </div>

@@ -7,20 +7,7 @@ function start() {
         "click", clickCreateAccountButton, false);
 } // end function start
 
-function selectApplication() {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("main").innerHTML = this.responseText;
-            document.getElementById("applicationPartOneButton").addEventListener(
-                "click", clickApplicationPartOneButton, false);
-            document.getElementById("applicationPartTwoButton").addEventListener(
-                "click", clickApplicationPartTwoButton, false);
-        }
-    };
-    xmlhttp.open("GET", "shared/selectApplication.html", true);
-    xmlhttp.send();
-}
+
 function clickLoginButton() {
 
     var name = document.getElementById("loginUsername").value;
@@ -67,16 +54,12 @@ function clickLoginButton() {
     }
 }
 
-function clickApplicationPartOneButton(){
-
-}
-
-function clickApplicationPartTwoButton(){
-    
+//Note: this is of course async
+function selectApplication() {
+    window.location.replace("shared/selectApplication.php");
 }
 
 function clickCreateAccountButton() {
-    console.log("hmm");
     /*
     $(document).ready(function () {
 

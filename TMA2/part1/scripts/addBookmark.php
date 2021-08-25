@@ -1,26 +1,15 @@
 <?php
 
 //$query = "Select * from names";
-$name = strval($_GET['name']);
-$password = strval($_GET['password']);
-echo $name;
-/*
-$mysqli = new mysqli("localhost:3306","Nick","Djstpk#629!()Sql","simpledb");
-// Check connection
-if ($mysqli -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-  exit();
-}
-else{
-    echo "we gucci";
-}*/
-require_once "dbConfig.php";
+session_start();
+$newURL= strval($_GET['newURL']);
+require_once "../../shared/dbConfig.php";
 
 // Perform query
 //if ($result = $mysqli -> query("SELECT * FROM names")) {
   //echo "Returned rows are: " . $result -> num_rows;
-$stmt = $mysqli->prepare('INSERT INTO users (username,password) VALUES (?,?)');
-$stmt->bind_param('ss', $name, $password);
+$stmt = $mysqli->prepare('INSERT INTO bookmark (url,idusers) VALUES (?,?)');
+$stmt->bind_param('si', $newURL, $_SESSION["idusers"]);
 
 $stmt->execute();
 $result = $stmt->get_result();
