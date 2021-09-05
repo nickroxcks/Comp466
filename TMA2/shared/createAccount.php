@@ -24,6 +24,43 @@ $stmt->bind_param('ss', $name, $password);
 
 $stmt->execute();
 $result = $stmt->get_result();
+
+//create a folder for user on the server
+$stmt = $mysqli->prepare('SELECT * FROM users WHERE users.username = ? AND users.password = ?');
+$stmt->bind_param('ss', $name, $password);
+$stmt->execute();
+$result = $stmt->get_result();
+
+$row = $result->fetch_array(MYSQLI_ASSOC);
+
+if($row){
+  if (!mkdir("../Users/U_" . $row["idusers"])) {
+    die('Failed to create directories...');
+  }
+}
+else{
+
+}
+/*
+
+
+$stmt = $mysqli->prepare('SELECT * FROM users WHERE users.username = ? AND users.password = ?');
+$stmt->bind_param('ss', $name, $password);
+
+$stmt->execute();
+$result = $stmt->get_result();
+
+$row = $result->fetch_array(MYSQLI_ASSOC);
+if($row){
+  $_SESSION["loggedin"] = true;
+  $_SESSION["idusers"] = $row["idusers"];
+  $_SESSION["username"] = $row["username"];
+  //header('location: selectApplication.php');
+  //exit();
+  echo $row["idusers"],",", $row["username"];
+}
+*/
+
 /*
  $result = $stmt->get_result();
  while ($row = $result->fetch_assoc()) {

@@ -49,7 +49,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div>
                     <button id="applicationPartOneButton" class="applicationBookmarkButton" href="../part1/main1.php"><a
                             href="../part1/main1.php">Bookmarking Service</a></button>
-                    <button id="applicationPartTwoButton" class="applicationCourseButton">Learning Course</button>
+                    <button id="applicationPartTwoButton" class="applicationCourseButton" href="../part2/main2.php"><a
+                            href="../part2/main2.php">Learning Courses</a></button>
                     <div id="lds-dual-ring" class="lds-dual-ring" style="display: none;"></div>
                 </div>
             </div>

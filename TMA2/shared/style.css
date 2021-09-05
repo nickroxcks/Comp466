@@ -375,6 +375,11 @@ font-family: 'proxima-nova', sans-serif;
       transform: rotate(360deg);
     }
   }
+
+  .selectLesson:hover{
+      color:#004687;
+      cursor: pointer;
+  }
   
 
 /* Other */
