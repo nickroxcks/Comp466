@@ -47,9 +47,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div id="applicationForm" class="applicationForm">
                 <div class="loginTitle">Select Application</div>
                 <div>
-                    <button id="applicationPartOneButton" class="applicationBookmarkButton" href="../part1/main1.php"><a
+                    <button id="applicationPartOneButton" class="applicationBookmarkButton" onclick="location.href='../part1/main1.php';"><a
                             href="../part1/main1.php">Bookmarking Service</a></button>
-                    <button id="applicationPartTwoButton" class="applicationCourseButton" href="../part2/main2.php"><a
+                    <button id="applicationPartTwoButton" class="applicationCourseButton" onclick="location.href='../part2/main2.php';"><a
                             href="../part2/main2.php">Learning Courses</a></button>
                     <div id="lds-dual-ring" class="lds-dual-ring" style="display: none;"></div>
                 </div>

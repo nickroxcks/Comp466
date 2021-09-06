@@ -37,7 +37,7 @@ function clickLoginButton() {
                     selectApplication();
                 }
                 else {
-                    console.log("yikes");
+                    console.log("invalid user");
                 }
                 document.getElementById("lds-dual-ring").style.display = "none";
                 /*

@@ -1,5 +1,5 @@
 <Lesson>
-    <LessonName>Demo Lesson 3</LessonName>
+    <LessonName>Nick Demo Lesson</LessonName>
     <Author>Nicholas Serrano</Author>
     <Introduction>
         <Title>Welcome to SimpleDev!</Title>
@@ -234,6 +234,68 @@
                 <Image>U2_p5_i3.jpg</Image>
                 <Paragraph>Thats it for the basic tags of CSS and JavaScript! You now have the basic knowledge and understanding to build a webpage with some style and dynamic 
                 functionality! When you are ready, you can select the second quiz from the navigation menu up top.
+                </Paragraph>
+            </Page>
+        </Unit>
+
+        <Unit>
+            <Page>
+                <Title>Unit 3: Basics of XML and AJAX Part 1</Title>
+                <Paragraph>
+                XML stands for eXtensible Markup Language. It is a language used to
+                store and transport data. For instance, say you have a website that allows users to view various articles. The
+                articles are large, and have a vast ammount of text. One solution of course would be to write the content of
+                your article directly into your html for your webpage. If you do this however, it will be very difficult to
+                reuse the content of your article on other parts of your webpage. Maybe perhaps you want to make your article
+                available to other websites as well. Instead of writing a bunch of text in your html for your article, you could
+                instead use XML, which can allow you to store all the text in a simple format. It is also considered good
+                practice in the modern age to place large ammounts of text or data in
+                other form of data storage. It makes your website structure cleaner, and increases the reusability of your
+                content. Lets touch on some of the basics of XML
+                </Paragraph>
+                <Image>U3_p1_i1.jpg</Image>
+                <Paragraph>
+                We can see XML following a very similar tag structure to that of HTML.
+                Every tag in XML needs a opening and end tag, and every XML document should be declared with the statement shown
+                on line 1. You'll notice the names for each tag are arbitrary. This is because XML data storing language. It has
+                no defined syntax for its tag names. All that matters is that the XML structure is correct. This means, we can
+                name our tags whatever we wish, unlike the pre-defined tag names in HTML. Tags in XML can be nested, allowing
+                you to create chains of tags to clearly define to context of your content. You can also add attributes to
+                further describe your context.
+                </Paragraph>
+                <Image>U3_p1_i2.jpg</Image>
+            </Page>
+            <Page>
+                <Title>Unit 3: Basics of XML and AJAX Part 2</Title>
+                <Paragraph>
+                So now that we understands some basics of how to write XML, lets look
+                at how we can use XML in our webpage. The Practice of applying Asynchronous JavaScript And
+                XML to a webpage is often refered to as AJAX. This technique makes use of the
+                XMLHttpRequest object in order to manipulate what is refered to as the HTML DOM. A Document Object Model(DOM) is
+                created by the browser when the webpage is loaded, and it defines all the content within the HTML. To
+                JavaScript, the DOM acts as an API to allow Javascript to manipulate it. Let's take a look at our html file real
+                quick:
+                </Paragraph>
+                <Image>U3_p2_i1.jpg</Image>
+                <Paragraph>
+                You can see we have 2 empty paragraphs with no content. We will use
+                AJAX to gather xml data to fill the paragraph tags with content. Here is our JavaScript file:
+                </Paragraph>
+                <Image>U3_p2_i2.jpg</Image>
+                <Paragraph>
+                We can see in the start function the creation of a XMLHttpRequest
+                object. Remeber, the communication between a web server and a client is Asynchronous, as such we will need to
+                listen for when the request is ready to be made. We can do this by using the onreadystatechange property of the
+                XMLHttpRequest object. A readyState property of 4 means the request is finished and response is ready. The
+                status property is the status number of a request, and a status propery of 200 means it is OK. So, with these
+                checks in place, we will use the XMLHttpRequest object to open our data XML file and insert the content. With
+                everything in play, we see our webpage is now updated to look like the following:
+                </Paragraph>
+                <Image>U3_p2_i3.jpg</Image>
+                <Paragraph>
+                Thats all for the basics of XML and AJAX! You now have the basic
+                knowledge and understanding to build utilizing AJAX! When you are ready, you can select the third quiz from the
+                navigation menu up top.
                 </Paragraph>
             </Page>
         </Unit>
