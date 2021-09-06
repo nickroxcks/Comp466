@@ -12,6 +12,8 @@ function clickLoginButton() {
 
     var name = document.getElementById("loginUsername").value;
     var password = document.getElementById("loginPassword").value;
+
+    //few checks to make sure user has entered info correct
     if (name == "") {
         document.getElementById("loginUsernameLabel").innerHTML = "<em class=\"redText\">*</em>Username:";
         document.getElementById("loginNotice").innerHTML = "<em class=\"redText\">Please enter Username</em>";
@@ -78,7 +80,7 @@ function clickCreateAccountButton() {
                 "click", clickReturnLoginButton, false);
         }
     };
-    xmlhttp.open("GET", "shared/createAccountForm.html", true);
+    xmlhttp.open("GET", "http://143.198.71.129/shared/createAccountForm.html", true);
     xmlhttp.send();
 }
 
