@@ -1,0 +1,24 @@
+<div class="main2-banner-title">Unit 3: Basics of XML and AJAX Part 2</div><div id="main2-banner-content"><p class="main2-banner-content-text-centered">
+                So now that we understands some basics of how to write XML, lets look
+                at how we can use XML in our webpage. The Practice of applying Asynchronous JavaScript And
+                XML to a webpage is often refered to as AJAX. This technique makes use of the
+                XMLHttpRequest object in order to manipulate what is refered to as the HTML DOM. A Document Object Model(DOM) is
+                created by the browser when the webpage is loaded, and it defines all the content within the HTML. To
+                JavaScript, the DOM acts as an API to allow Javascript to manipulate it. Let's take a look at our html file real
+                quick:
+                </p><img class="main2-banner-content-image-centered" src="U3_p2_i1.jpg" /><p class="main2-banner-content-text-centered">
+                You can see we have 2 empty paragraphs with no content. We will use
+                AJAX to gather xml data to fill the paragraph tags with content. Here is our JavaScript file:
+                </p><img class="main2-banner-content-image-centered" src="U3_p2_i2.jpg" /><p class="main2-banner-content-text-centered">
+                We can see in the start function the creation of a XMLHttpRequest
+                object. Remeber, the communication between a web server and a client is Asynchronous, as such we will need to
+                listen for when the request is ready to be made. We can do this by using the onreadystatechange property of the
+                XMLHttpRequest object. A readyState property of 4 means the request is finished and response is ready. The
+                status property is the status number of a request, and a status propery of 200 means it is OK. So, with these
+                checks in place, we will use the XMLHttpRequest object to open our data XML file and insert the content. With
+                everything in play, we see our webpage is now updated to look like the following:
+                </p><img class="main2-banner-content-image-centered" src="U3_p2_i3.jpg" /><p class="main2-banner-content-text-centered">
+                Thats all for the basics of XML and AJAX! You now have the basic
+                knowledge and understanding to build utilizing AJAX! When you are ready, you can select the third quiz from the
+                navigation menu up top.
+                </p></div>
