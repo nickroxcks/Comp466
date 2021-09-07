@@ -73,7 +73,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <ul>
                         <li><a href="../part1/main1.php">Bookmarking Service</a></li>
                         <li><a href="main2.php">Lesson Service</a></li>
-                        <li><a href="">Documentation</a></li>
+                        <li><a href="http://143.198.71.129/tma2.html">Documentation</a></li>
                         <li><a href="../shared/logout.php">Logout</a></li>
                     </ul>
                 </nav>

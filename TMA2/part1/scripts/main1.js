@@ -1,12 +1,7 @@
 /*
-All portions of the assignemnt run this script. 
+Script run for bookmark service
 */
 var bookmarkData = [];
-var outputHTML = ""; // stores text to output in outputDiv
-var idCounter = 1; // used to create div IDs
-var depth = -1; // tree depth is -1 to start
-var current = null; // represents the current node for traversals
-var previous = null; // represent prior node in traversals
 var sidebarVisible = false;
 // register event handlers for buttons and load XML document
 function start() {
@@ -21,12 +16,6 @@ function start() {
         "click", clickAddBookmarkButton, false);
     document.getElementById("BookmarkDeleteBookmarkButton").addEventListener(
         "click", clickDeleteBookmarkButton, false);
-
-    //BookmarkEditBookmarkButton
-
-    //document.getElementById("parentNode").addEventListener(
-    //"click", processParentNode, false);
-    //loadXMLDocument('article.xml')
     getTopTenBookmarks();
 } // end function start
 
@@ -43,7 +32,7 @@ function clickMenuButton() {
 function clickHomeButton() {
     getTopTenBookmarks();
 }
-
+//run php script to get the top 10 most popular bookmarks
 function getTopTenBookmarks() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {

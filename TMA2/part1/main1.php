@@ -72,9 +72,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <!-- Menu -->
                 <nav id="menu">
                     <ul>
-                        <li><a href="">Bookmarking Service</a></li>
-                        <li><a href="">Course</a></li>
-                        <li><a href="">Documentation</a></li>
+                        <li><a href="http://143.198.71.129/part1/main1.php">Bookmarking Service</a></li>
+                        <li><a href="http://143.198.71.129/part2/main2.php">Lesson Service</a></li>
+                        <li><a href="http://143.198.71.129/tma2.html">Documentation</a></li>
                         <li><a href="../shared/logout.php">Logout</a></li>
                     </ul>
                 </nav>

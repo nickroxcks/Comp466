@@ -1,10 +1,7 @@
 /*
-All portions of the assignemnt run this script. 
+Script run for Lesson Service
 */
 var bookmarkData = [];
-var outputHTML = ""; // stores text to output in outputDiv
-var idCounter = 1; // used to create div IDs
-var depth = -1; // tree depth is -1 to start
 var current = null; // represents the current node for traversals
 var previous = null; // represent prior node in traversals
 var sidebarVisible = false;
@@ -91,7 +88,7 @@ function clickLessonManageButton() {
                             "<a href=\"../Users/U_" + tmpArray[i + 3] + "/L_" + tmpArray[i] + "/index.php\">" + tmpArray[i + 1] + ", Created by " + tmpArray[i + 2] + "</a></em>" +
                             "<button onclick=\"clickAddUsers(" + tmpArray[i] + "," +"\'"+ tmpArray[i + 1] + "\'" + ")\">Add Users</button>" +
                             "<button onclick=\"editImages(" + tmpArray[i] + "," + "\'" + tmpArray[i + 1] + "\'" + ")\">Edit Images</button>" +
-                            "<button onclick=\"deleteLesson(" + tmpArray[i] + ")\">Delete Lesson</button>" + "</p>";
+                            "</p>";
                         //strContent = strContent + "<p class=\"main2-banner-content-text-centered\" id=\"L" + tmpArray[i] + "\">" +
                         //"<em class=\"selectLesson\" onclick=\"clickLesson(" + tmpArray[i] + "," + tmpArray[i + 3] + ")\">" + tmpArray[i + 1] + ", Created by " + tmpArray[i + 2] + "</em></p>";
                     }
