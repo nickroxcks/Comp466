@@ -10,7 +10,8 @@
     The UI is very simple. There is a header navigation on top to select different parts of the service, the content displayed directly below the header, and a sidebar to the left which can be
     displayed by clicking the SimpleDev logo button. By default, you are on the homepage. The hompage displays a list of the Lessons the current user has access too. These include,
     the lessons that they have created, or the lessons that other users have created and given access to the current user. All lessons created are tracked inside the 
-    MySQL simpledb lessons table.
+    MySQL simpledb lessons table. You can click a lesson to open the lesson and view it in your browser. The lesson should have a yellow navigation when opened to give you a indication
+    you are reading a lesson.
     </p>
     <img class="main2-banner-content-image-centered" src="documentation/lessons.png" />
 
@@ -23,7 +24,8 @@
     <p class="main2-banner-content-text-centered">
         To create a lesson, the user will need to press the upload button at the top of the navigation. Here the user is given the option to upload a lesson. A lesson
         is created by a user by uploading an EML file along with its corresponding images and other forms of media. At the moment, text and images are the only acceptable form of
-        content for each lesson, but this should be enough for content creators to display the information they need for their lessons. 
+        content for each lesson, but this should be enough for content creators to display the information they need for their lessons. The user can press the upload button after
+        they have chosen their EML file.
     </p>
 
     <p class="main2-banner-content-text-centered">
@@ -32,6 +34,51 @@
     <img class="main2-banner-content-image-centered" src="documentation/LessonsXMLStructure.png" />
 
     <p class="main2-banner-content-text-centered">
-        I've created a quick visual representation above. 
+        I've created a quick visual representation above. The EML, is essentially an xml file that follows the structure followed above. Let's walk thorugh the visual respresentation.
+        Every EML file uploaded is one lesson. A lesson has various forms of content to teach the readers. So, every EML file will start with a Lesson tag. This tag must be the first
+        tag, and it is required. Within this Lesson tag, you are required a single LessonName tag (name displayed for the lesson), and a single Author tag (author of the lesson, this
+        can be any author and does not need to be a valid user in the database). Within the Lesson tag, you are also REQUIRED a Introduction tag, a LessonContent tag, and a Quiz tag.
+        The introduction is a single page introduction that allows readers to get an understanding of what the lesson will contain. This introduction tag must have one single Title tag to 
+        give a title to the introduction page. Following the title tag, you are allowed 0 or more Image and Paragraph tags. The plural in the diagram above denotes multiple are allowed.
+        The author will place these image and paragraph tags in the order which they want them to be displayed to the reader. A Paragraph tag, followed by an Image tag, followed by a 
+        Paragraph tag will display the first paragraph, an image, and the second paragraph in that order. Paragraph tags will contain text, and Image tags will contain the file Name
+        of the image that is to displayed. For example, if I have an image called testImage.png, that is what I will put within the image tag. You only need the file name,
+        do not specify a directory path to your image. Invalid images will not be displayed when viewing the lesson.
+    </p>
+    <p class="main2-banner-content-text-centered">
+        The LessonContent tag contains 1 or more Unit tags. At least one Unit tag must be here. Units essentially allow authors to break the lesson content into different parts.
+        A reader can access any unit within a Lesson by pressing that unit in the top navigation of the lesson. Each Unit tag, will have 1 or more Page tags. When the reader selects
+        a unit, they will be able to navigate through each page by pressing a next or previous button. Each page tag, must have 1 Title tag, and 0 or more Image and Paragraph tags.
+        The rules for these tags are the same as the Introduction.
+    </p>
+
+    <p class="main2-banner-content-text-centered">
+        Finally, there is also the Quiz tag within the Lesson tag. These are a series of multiple choice quizzes to test and grade the reader of their understanding of the lesson.
+        Within the Quiz tag, there must be at least 1 or more Unit tags within them. The number of unit tags should match the number unit tags used in LessonContent. The idea here is
+        that every unit should have 1 corresponding quiz. The order in which these unit tags are entered is important. The first Unit tag is transformed into Quiz 1, the second unit
+        tag is transformed into Quiz 2, etc. Within each of these Unit tags, you can have 0 or more MultipleChoice tags. Each MultipleChoice tag is one question. Within the MultipleChoice
+        tag, you will have the tags A, B, C, D, and Answer. Enter the desired text to be displayed for options A B C and D for that question, and then enter the correct answer in the Answer
+        tag. The answer tag should only contain 1 letter, this letter can be A B C or D.
+    </p>
+
+    <p class="main2-banner-content-text-centered">
+        Thats it for the EML. If the user tries to submit a file that is not an XML file, the server will reject
+        the file and give the user a notice message saying the file is invalid. I should mention, whenever a file is uploaded to the server, the file is initially saved to a upload 
+        folder on the server. This a temporary folder, used only to temporarily store the file to allow the parser on the server to naviagate through the file. When a EML file is 
+        uploaded, a parser script is run on the server end. This parser script servers 2 purposes. One purspose is to valideate the EML file follows the required format, and the 
+        other is to transfrom the EML into a several html files to allow the lesson to be viewed in your browser. If you read the parser code, you will see it will first
+        break down each element to see if they are valid and save the data in arrays, and once the format is validated, take all that data and build several html files. The parser
+        will save a folder under the correspoinding User folder following the naming convention L_ID, where ID is the lesson ID descided by the database, and inside this folder
+        will contain all the files needed to display the lesson in a browser. I won't go into detail of all the files, but basically every lesson has a index file 
+        built off a basic html template, and then html files for each page and quiz. These page and quiz files get inserted into the index to display the content to the reader.
+    </p>
+    <p class="main2-banner-content-text-centered">
+        Thats it for uploading EML. I have provided a sample EML file that will you can use for reference. It is called lessonData.xml and is located inside the part2 folder of
+        the assignment.
+        After a successful upload, the user is given the option to upload the images for that lesson. They can choose to do this now or later.
+        If they choose to not upload there images, the images will not be displayed when reading the lesson. You can manage the lessons you created by pressing the 
+        manage button in the navigation. Here you have the option to add images you may have forgotten to upload, or you can give users access to your lesson to be viewed.
+        All you need to do for this, is click add users, and enter the username of the user you would like to provide access to your lesson. After this, that user will be able 
+        to view your lesson. 
     </p>
 </div>

@@ -3,7 +3,7 @@ var sidebarVisible = false;
 
 function start() {
     document.getElementById("sidebar").style.display = "none";
-    document.getElementById("menubutton").addEventListener("click",clickMenuButton(),false);
+    document.getElementById("menubutton").addEventListener("click",clickMenuButton,false);
     document.getElementById("DocHomeButton").addEventListener("click", function () {
         setContent("documentation/home.html");
     });
@@ -15,6 +15,9 @@ function start() {
     });
     document.getElementById("DocPart2Button").addEventListener("click", function () {
         setContent("documentation/part2doc.html");
+    });
+    document.getElementById("DocREADMEButton").addEventListener("click", function () {
+        setContent("documentation/README.html");
     });
 } // end function start
 
