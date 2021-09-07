@@ -25,13 +25,18 @@ if(isset($_FILES['file']['name'])){
     // Valid extensions
     $valid_ext = array("xml");
     //$valid_ext = array("pdf","doc","docx","jpg","png","jpeg");
- 
+    
+    //check if valid file extension, if not, reject file and close cript. 
     if(in_array($file_extension,$valid_ext)){
        // Upload file
        if(!move_uploaded_file($_FILES['file']['tmp_name'],$location)){
           echo 0;
           exit();
        } 
+    }
+    else{
+        echo 0;
+        exit();
     }
     //Check if file exists
     if (file_exists($location)) {
@@ -55,8 +60,7 @@ if(isset($_FILES['file']['name'])){
             $headerStr = $headerStr . "<div class=\"fas nav_button\" onclick=\"clickUnitButton(". $x . ")\" id=\"unit" . $x . "Button\">Unit ". $x . "</div>";
         }
 
-        //begin parsing content
-        //foreach($xmlArray["Lesson"]["Introduction"] as $key => $value)
+        //begin parsing content. If ever we come across an unknown eml element, we reject the file and end the script
         foreach($xml->children() as $parentValue){
 
             //Start building introduction page. This should happen first
@@ -197,6 +201,11 @@ if(isset($_FILES['file']['name'])){
                 exit();
             }
         }
+        //finally, make sure there is a lesson name and author
+        if($lessonName == '' || $authorName == ''){
+            echo 0;
+            exit();
+        }
 
         //all checks have passed, now we add the lesson to the DB, and save the files
         require_once "../shared/dbConfig.php";
@@ -222,7 +231,7 @@ if(isset($_FILES['file']['name'])){
         }
 
         //echo $unitArray[1][0];
-        if(!is_dir("../Users/U_" . $_SESSION["idusers"])){
+        if(!is_dir("../Users/U_" . $_SESSION["idusers"])){  //this error should not occur, but a check is here just in case
             echo 0;
             console_log("couldn't find user folder, exiting script");
             exit();
@@ -248,6 +257,7 @@ if(isset($_FILES['file']['name'])){
             }
         }
         file_put_contents("../Users/U_" . $_SESSION["idusers"] . "/L_" . $lessonId . "/pageInfo.txt",$pagesStr);  //make a pages file
+        
         /*
             <div class="fas nav_button">
                 <ul class="fas" id="quizul">Quizzes
@@ -283,24 +293,7 @@ if(isset($_FILES['file']['name'])){
             echo 0;
             exit();
         }
-        echo $lessonId . ',' . $lessonName;
-        //file_put_contents('Welcome.html',$strContent);  //TODO:: move this to user lesson directory
-
-
-        /*
-        for each($xmlArray["Lesson"]["LessonContent"]){
-
-        }
-        */
-
-        //print_r($xmlArray);
-        //print_r($xmlArray["Lesson"]["Quiz"]["Unit1"]["MultipleChoice"][0]["Question"]["value"]);   This works
-        //echo $xmlArray;
-
-
-
-    
-        //print_r($xml);
+        echo $lessonId . ',' . $lessonName;  //lesson has been successfully created. return the lessonid and the lessonName
     } 
     else {
         echo 0;

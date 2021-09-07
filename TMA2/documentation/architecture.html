@@ -1,0 +1,36 @@
+<div class="main2-banner-title">Architecture</div>
+<div id="main2-banner-content">
+    <img class="main2-banner-content-image-centered" src="documentation/highLevel.png" />
+    <p class="main2-banner-content-text-centered">
+    The image above shows a high level overview for the Architecture of the assignment.
+    Essentially, the entire website is being run on a live VM
+    hosted by digital ocean. This VM follows a LAMP software stack model. LAMP stands for Linux, Apache, MySQL, and PHP. All of these services are installed 
+    on the VM itself. I chose this model because it was the most ideal model that meets the assignment requirements(and free of cost). The client application (you) will connect to
+    the web server via http through the ip address of the server. All the user needs to do is enter the URL http://143.198.71.129/login.php in their webrowser 
+    in order to run the web application. Note, all browser testing for this assignment was done using google chrome and firefox. I have not tested compatability on other browsers.
+    I did not want to set a domain name for this website being that it is a smallscale website used only for the purposes for this course, so for now please connect using IP.
+    </p>
+
+    <p class="main2-banner-content-text-centered">
+    For this assignment, I have chosen to combine both part 1 and 2 into one web application called SimpleDev. 
+    So, the same user account is used to access both part 1 and part 2 of this assignment. Essentially, when the user connects to the web server for the first time 
+    they are automatically directed to the login screen of the web application. If the user tries to access the Bookmarking Service for example by entering in their 
+    browser http://143.198.71.129/part1/main1.php without having have logged in already, 
+    the client is automatically redirected to the login screen. The user will not be able to directly connect to any service until they have logged in successfully. After a successful login,
+    the user session is stored and the user is presented options to run either the Bookmarking Service or the Lesson Service. The user can navigate between both services whenever
+    the wish, so as long as they are logged in. Your session is saved using via php $_SESSION variables, so you can close the browser and then reconnect without having to log back in.
+    If the user presses the logout button, they will have to log back in.  
+    </p>
+
+    <p class="main2-banner-content-text-centered">
+        Talking more about the webserver, the image above shows there is a MySQL database stored on the web server called simpledb. This db has several tables used for each part of 
+        the assignment. The "users" table, has the columns idusers, username, and password, with the idusers being the primary key of the table. When users create their accounts,
+        the account information is stored here.
+        You may have noticed in the high level image above, there is a user folder. When you create an account, the web server also creates a direct folder for that user on the 
+        webserver stored under Users/U_ID. ID is the id of that user that is stored in the SQL database. So for example if I create a new account and my ID is 7, the webserver
+        will create the directory Users/U_7. These user folders are used in primarily in part 2 of the assignment, in order to allow the user to store all their forms of media such
+        as images for the lessons they create. More of this is covered in part2 of the documentation.
+    </p>
+
+    <img class="main2-banner-content-image-centered" src="Main2_images/U1_p1_i1.jpg" />
+</div>

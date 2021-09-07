@@ -1,0 +1,37 @@
+<div class="main2-banner-title">Documentation for Part 2, Lesson Service</div>
+<div id="main2-banner-content">
+    <p class="main2-banner-content-text-centered">
+    Accessing this part of the asignment can done several ways. After you log in to the webserver, you are presented an option of what service you would like to run. Pressing
+    the lesson service button will redirect you to part 2 of the assignment. You can also access it directly via http://143.198.71.129/part2/main2.php, or by pressing 
+    the SimpleDev button to open the sidebar to select the lesson service. All of the scripting for this application is run in main2.js.
+    </p>
+
+    <p class="main2-banner-content-text-centered">
+    The UI is very simple. There is a header navigation on top to select different parts of the service, the content displayed directly below the header, and a sidebar to the left which can be
+    displayed by clicking the SimpleDev logo button. By default, you are on the homepage. The hompage displays a list of the Lessons the current user has access too. These include,
+    the lessons that they have created, or the lessons that other users have created and given access to the current user. All lessons created are tracked inside the 
+    MySQL simpledb lessons table.
+    </p>
+    <img class="main2-banner-content-image-centered" src="documentation/lessons.png" />
+
+    <p class="main2-banner-content-text-centered">
+        Most of these table columns are self explanitory. lesson_id provides the lesson entry a unique indentifier, author_id is the user id of creator of the lesson, 
+        and auth_users is a list of comma seperated strings of all the users id's that have access to this lesson. An example string would be: 6,8,9 , where user
+        id's 6,8, and 9 are given access to this lesson.
+    </p>
+
+    <p class="main2-banner-content-text-centered">
+        To create a lesson, the user will need to press the upload button at the top of the navigation. Here the user is given the option to upload a lesson. A lesson
+        is created by a user by uploading an EML file along with its corresponding images and other forms of media. At the moment, text and images are the only acceptable form of
+        content for each lesson, but this should be enough for content creators to display the information they need for their lessons. 
+    </p>
+
+    <p class="main2-banner-content-text-centered">
+        Talking about the EML, I will break it down as much as I can. 
+    </p>
+    <img class="main2-banner-content-image-centered" src="documentation/LessonsXMLStructure.png" />
+
+    <p class="main2-banner-content-text-centered">
+        I've created a quick visual representation above. 
+    </p>
+</div>

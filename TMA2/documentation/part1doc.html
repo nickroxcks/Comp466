@@ -1,0 +1,36 @@
+<div class="main2-banner-title">Documentation for Part 1, Bookmarking Service</div>
+<div id="main2-banner-content">
+    <p class="main2-banner-content-text-centered">
+    Accessing this part of the asignment can done several ways. After you log in to the webserver, you are presented an option of what service you would like to run. Pressing
+    the bookmarking service button will redirect you to part 1 of the assignment. You can also access it directly via http://143.198.71.129/part1/main1.php, or by pressing 
+    the SimpleDev button to open the sidebar to select the bookmarking service. All of the scripting for this application is run in main.js.
+    </p>
+
+    <p class="main2-banner-content-text-centered">
+    The UI is very simple. There is a header navigation on top to select different parts of the service, the content displayed directly below the header, and a sidebar to the left which can be
+    displayed by clicking the SimpleDev logo button. By default, you are on the homepage. The hompage displays a list of the 10 most popular bookmarks on the website. You can click 
+    a bookmark link to be redirected to that bookmark. These 
+    top 10 bookmarks are found by searching through the bookmark table in the MySQL simpledb database, and counting the number of times each bookmark was saved (selecting the top 10).
+    The bookmark table looks like the following. 
+    </p>
+    <img class="main2-banner-content-image-centered" src="documentation/bookmark.png" />
+
+    <p class="main2-banner-content-text-centered">
+        Every bookmark entry saved by a user in the bookmark table has a unique bookmark id in order to identify that specific bookmark. The table also saves the url as a 
+        varchar(200), and the id user that saved the bookmark. Note, I assumed that 200 characters is enough length for a URL. I have no forms of error checking for longer then 
+        200 characters, so please limit yourself to nothing longer. 
+    </p>
+
+    <p class="main2-banner-content-text-centered">
+        Talking more about the application, you can press the your bookmarks button in the navigation to be redirected to a screen that shows the bookmarks you have saved
+        for yourself. You can click a bookmark to automatically get redirected to that webpage. The add bookmark button will take you to a screen where you can add a bookmark 
+        of your choosing. After pressing the submit button, javascript will perform some regex checking to validate the form of the URL. After validating the form, xmlhttp request 
+        is run against the URL to validate if the URL exists. If a 404 error is returned, the script will understand that the URL is invalid, and return an appropriate error message
+        to the user. If the URL is valid, the URL is saved to the DB and the user can then see that bookmark. 
+    </p>
+
+    <p class="main2-banner-content-text-centered">
+        There is also the edit bookmark button. This section is self explanitory. You can press the delete button to delete the URL, or edit button to edit 
+        the URL. If you edit the URL, a validation check is done once again to see if the URL is a correct URL. Error messages and notifications are displayed when needed.
+    </p>
+</div>
