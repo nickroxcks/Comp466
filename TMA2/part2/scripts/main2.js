@@ -142,14 +142,24 @@ function sendFile() {
             if (this.readyState == 4 && this.status == 200) {
 
                 var response = this.responseText;
-                if (response != 0) {
+                if (response == 0) {
+                    alert("File not uploaded. Invalid format");
+                } 
+                else if(response==1){
+                    alert("File was not able to be uploaded to the server");
+                }
+                else if(response==2){
+                    alert("Invalid file format. Require at least 1 unit in LessonContent");
+                }
+                else if(response==3){
+                    alert("Invalid file format. Unknown tag in LessonContent");
+                }
+                else {
                     var tmpArray = this.responseText.split(',');
                     globalCurrentLessonID = tmpArray[0];
                     globalCurrentLessonName = tmpArray[1];
                     clickAddImages(tmpArray[0], tmpArray[1]);
                     alert("Lesson has been created! You can upload your images for the lesson now, or do it at a later time!");
-                } else {
-                    alert("File not uploaded. Invalid format");
                 }
             }
         };

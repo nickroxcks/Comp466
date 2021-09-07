@@ -30,7 +30,7 @@ if(isset($_FILES['file']['name'])){
     if(in_array($file_extension,$valid_ext)){
        // Upload file
        if(!move_uploaded_file($_FILES['file']['tmp_name'],$location)){
-          echo 0;
+          echo 1;
           exit();
        } 
     }
@@ -50,7 +50,7 @@ if(isset($_FILES['file']['name'])){
         //$totalUnits = count($xmlArray["Lesson"]["LessonContent"]);
         $totalUnits = count($xml->xpath('/Lesson/LessonContent/Unit'));  //not including introduction
         if($totalUnits < 1){
-            echo 0;
+            echo 2;
             exit();
         }
         //build heading navigation
@@ -127,7 +127,7 @@ if(isset($_FILES['file']['name'])){
                         $unitNumber++;
                     }
                     else{
-                        echo 0;
+                        echo 3;
                         exit();
                     }
                 }
@@ -233,12 +233,11 @@ if(isset($_FILES['file']['name'])){
         //echo $unitArray[1][0];
         if(!is_dir("../Users/U_" . $_SESSION["idusers"])){  //this error should not occur, but a check is here just in case
             echo 0;
-            console_log("couldn't find user folder, exiting script");
             exit();
         }
         if (!mkdir("../Users/U_" . $_SESSION["idusers"] . "/L_" . $lessonId)) {
-            console_log("couldnt add lesson folder");
-            die('Could not add lesson to db');
+            echo 0;
+            exit();
         }
 
         //We've made the lesson folder, now we save all the files in the correspoding lesson folder for that user
