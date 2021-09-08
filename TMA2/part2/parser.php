@@ -11,6 +11,17 @@ function console_log($output, $with_script_tags = true) {
     echo $js_code;
 }
 
+function get_data($url) {
+    $ch = curl_init();
+    $timeout = 5;
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    return $data;
+}
+
 if(isset($_FILES['file']['name'])){
     // file name
     $filename = $_FILES['file']['name'];
@@ -43,7 +54,9 @@ if(isset($_FILES['file']['name'])){
     if (file_exists($location)) {
         echo " file exists, going to load xml.";
         echo " file is at:" . $location;
-        $xml = simplexml_load_file($location);  //this is a SimpleXMLElement class. Note: __toString returns the data of the object
+        $xmlContent = get_data($location);
+        $xml = simplexml_load_string($location);
+        //$xml = simplexml_load_file($location);  //this is a SimpleXMLElement class. Note: __toString returns the data of the object
         echo " loading has worked";
         $unitArray = array();  //unitArray[0] = Introduction html, unitArray[1][0] = html of Unit 1 page 1, unitArray[2][2] html of unit 2 page 3...
         $quizArray = array();  //quizArray[1][0] html div for unit 1 question 1
