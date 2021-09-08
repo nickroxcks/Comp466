@@ -142,16 +142,16 @@ function sendFile() {
             if (this.readyState == 4 && this.status == 200) {
 
                 var response = this.responseText;
-                if (response == 0) {
+                if (response == '0') {
                     alert("File not uploaded. Invalid format");
                 } 
-                else if(response==1){
+                else if(response=='1'){
                     alert("File was not able to be uploaded to the server");
                 }
-                else if(response==2){
+                else if(response=='2'){
                     alert("Invalid file format. Require at least 1 unit in LessonContent");
                 }
-                else if(response==3){
+                else if(response=='3'){
                     alert("Invalid file format. Unknown tag in LessonContent");
                 }
                 else {
