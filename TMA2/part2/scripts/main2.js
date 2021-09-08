@@ -135,7 +135,7 @@ function sendFile() {
         var xhttp = new XMLHttpRequest();
 
         // Set POST method and ajax file path
-        xhttp.open("POST", "http://143.198.71.129/part2/parser.php", true);
+        xhttp.open("POST", "parser.php", true);
 
         // call on request changes state
         xhttp.onreadystatechange = function () {
