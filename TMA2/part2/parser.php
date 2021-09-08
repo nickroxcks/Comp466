@@ -208,6 +208,7 @@ if(isset($_FILES['file']['name'])){
         }
 
         //all checks have passed, now we add the lesson to the DB, and save the files
+        echo "checks have passed";
         require_once "../shared/dbConfig.php";
         $stmt = $mysqli->prepare('INSERT INTO lessons (lesson_name, author_name, author_id, auth_users) VALUES (?,?,?,?)');
         $stmt->bind_param('ssis', $lessonName, $authorName, $_SESSION["idusers"], $_SESSION["idusers"]);
