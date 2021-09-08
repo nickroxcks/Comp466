@@ -163,6 +163,9 @@ function sendFile() {
                     alert("Lesson has been created! You can upload your images for the lesson now, or do it at a later time!");
                 }
             }
+            else{
+                console.log(this.responseText);
+            }
         };
 
         // Send request with data
