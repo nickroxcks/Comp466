@@ -155,6 +155,7 @@ function sendFile() {
                     alert("Invalid file format. Unknown tag in LessonContent");
                 }
                 else {
+                    console.log('Here is what is printing: ' + this.responseText)
                     var tmpArray = this.responseText.split(',');
                     globalCurrentLessonID = tmpArray[0];
                     globalCurrentLessonName = tmpArray[1];
