@@ -140,7 +140,7 @@ function sendFile() {
         // call on request changes state
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-
+                console.log("ok this is the response text: " + this.responseText);
                 var response = this.responseText;
                 if (response == '0') {
                     alert("File not uploaded. Invalid format");

@@ -16,7 +16,7 @@ if(isset($_FILES['file']['name'])){
     $filename = $_FILES['file']['name'];
  
     // Location
-    $location = 'http://143.198.71.129/part2/upload/U_'.$_SESSION["idusers"].'_data.xml';
+    $location = 'upload/U_'.$_SESSION["idusers"].'_data.xml';
  
     // file extension
     $file_extension = pathinfo($location, PATHINFO_EXTENSION);
