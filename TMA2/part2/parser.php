@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+var_dump(ini_get('allow_url_fopen'));
 function console_log($output, $with_script_tags = true) {
     $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . 
 ');';
