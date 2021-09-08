@@ -55,7 +55,7 @@ if(isset($_FILES['file']['name'])){
         echo " file exists, going to load xml.";
         echo " file is at:" . $location;
         $xmlContent = get_data($location);
-        $xml = simplexml_load_string($location);
+        $xml = simplexml_load_string($xmlContent);
         //$xml = simplexml_load_file($location);  //this is a SimpleXMLElement class. Note: __toString returns the data of the object
         echo " loading has worked";
         $unitArray = array();  //unitArray[0] = Introduction html, unitArray[1][0] = html of Unit 1 page 1, unitArray[2][2] html of unit 2 page 3...
