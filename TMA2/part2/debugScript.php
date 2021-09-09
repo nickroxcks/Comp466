@@ -4,7 +4,7 @@
 session_start();
 $userID = $_SESSION["idusers"];
 //$location = 'upload/U_'.$_SESSION["idusers"].'_data.xml';
-$location = 'http://143.198.71.129/part2/upload/U_'.$_SESSION["idusers"].'_data.xml';
+$location = 'http://localhost:80/part2/upload/U_'.$_SESSION["idusers"].'_data.xml';
 
 /*
 if( ini_get('allow_url_fopen') ) {
