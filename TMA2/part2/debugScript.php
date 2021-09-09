@@ -1,5 +1,6 @@
 <?php
 
+/*
 session_start();
 $userID = $_SESSION["idusers"];
 $location = 'upload/U_'.$_SESSION["idusers"].'_data.xml';
@@ -12,5 +13,6 @@ if (file_exists($location)) {
 else{
     echo "file not in path";
 }
-
+*/
+echo "test";
 ?>
