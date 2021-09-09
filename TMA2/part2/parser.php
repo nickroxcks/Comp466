@@ -30,8 +30,8 @@ if(isset($_FILES['file']['name'])){
     if(in_array($file_extension,$valid_ext)){
        // Upload file
        if(!move_uploaded_file($_FILES['file']['tmp_name'],$location)){
-          echo 1;
-          exit();
+          //echo 1;
+          //exit();
        } 
     }
     else{
