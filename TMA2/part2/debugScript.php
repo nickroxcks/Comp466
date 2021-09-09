@@ -16,6 +16,7 @@ libxml_use_internal_errors(true);
 
 if (file_exists($location)) {
     echo "going to try loading file";
+    echo $xmlString;
     $xml = simplexml_load_string($xmlString);  //this is a SimpleXMLElement class. Note: __toString returns the data of the object
     foreach( libxml_get_errors() as $error ) {
 
