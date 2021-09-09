@@ -4,9 +4,9 @@
 session_start();
 $userID = $_SESSION["idusers"];
 //$location = 'upload/U_'.$_SESSION["idusers"].'_data.xml';
-$location = 'upload/U_12_data.xml';
+$location = "upload/U_12_data.xml";
 
-
+$xmlString = file_get_contents($location);
 
 if( ini_get('allow_url_fopen') ) {
     echo "allow url open is enabled...";
@@ -16,7 +16,7 @@ libxml_use_internal_errors(true);
 
 if (file_exists($location)) {
     echo "going to try loading file";
-    $xml = simplexml_load_file($location);  //this is a SimpleXMLElement class. Note: __toString returns the data of the object
+    $xml = simplexml_load_string($xmlString);  //this is a SimpleXMLElement class. Note: __toString returns the data of the object
     foreach( libxml_get_errors() as $error ) {
 
         print_r($error);
