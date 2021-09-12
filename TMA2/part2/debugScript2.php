@@ -14,7 +14,8 @@ if( ini_get('allow_url_fopen') ) {
 libxml_use_internal_errors(true);
 echo 'Current PHP version: ' . phpversion();
 if (file_exists($location)) {
-    echo "going to try loading file";
+    echo "going to try loading file">;
+    echo $xmlString;
     $dom = new DOMDocument;
     $dom->loadXML($xmlString);
     echo "success";
