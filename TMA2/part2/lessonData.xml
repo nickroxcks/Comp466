@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Lesson>
-    <LessonName>Evan Demo Lesson</LessonName>
+    <LessonName>Evan's Demo Lesson</LessonName>
     <Author>Evan Timms</Author>
     <Introduction>
         <Title>Welcome to SimpleDev!</Title>
@@ -72,27 +72,26 @@
                 <Paragraph>
                 
                 
-                    A comment in HTML is displayed in the following form: &lt;&#33;&#45;&#45;Content of comment&#45;&#45;&gt;.
+                    A comment in HTML is displayed as shown in the green text above.
 
                     A comment is ignored by all browsers. It is simply a tool used by readers of the document to help give information about the document.
 
-                    The most important element in html is the html element, taking the
-                            form:&lt;html&gt;
+                    The most important element in html is the html element
 
                     This tag is included in every html document. All content in the document must be placed in between the opening and closing tags
 
-                    The next tag used in the example is the head tag, taking the form: &lt;head&gt;
+                    The next tag used in the example is the head tag.
 
-                    It is between these two tags, where information about the HTML5 document, such as the character set (UTF-8, the most popular character-encoding scheme for the web) is placed. 
+                    It is in this tag, where information about the HTML5 document, such as the character set (UTF-8, the most popular character-encoding scheme for the web) is placed. 
                     The head tag also links the html file other special related documents, such as CSS and JavaScript files
 
-                    The &lt;meta&gt; tag defines metadata related to the document. That is, data (information) about data. Things like character set, page description, keywords, author of the document, 
+                    The meta tag defines metadata related to the document. That is, data (information) about data. Things like character set, page description, keywords, author of the document, 
                     are what this tag describes. Metadata is not displayed in browsers, it is only used. Browsers will look at meta tags to understand how the webpage should dsiplay content. 
                     In the example above we see charset set to utf-8. So browsers will load this webpage, and understand that the utf-8 charset is to be used.
 
                     Charset is considered to be an attribute. Attributes are parameters belonging to certain elements, that can be assigned a value
 
-                    Mulitple attributes can be assigned for a given element. They take the form: &lt;ELEMENT attributeName=VALUE&gt;.
+                    Mulitple attributes can be assigned for a given element.
                 </Paragraph>
             </Page>
 
@@ -100,20 +99,20 @@
                 <Title>Unit 1: Basic HTML elements Part 3</Title>
                 <Image>U1_p2_i1.jpg</Image>
                 <Paragraph>
-                    The title tag takes the form: &lt;title&gt;
+                    The title tag is another important tag.
 
                     You can only have one of these tags in a html document. It defines the title of the document.
 
                     This title can be viewed from the browsers title bar. This title is very important for browsers in that it allows serach engine algorithms to detect the webpage.
 
-                    The body tag, takes the form: &lt;body&gt;. 
+                    There is also the body tag.
                     It is within this tag that all the contents of the html documents you are reading are placed. For instance all the content you are reading in this unit, was placed within a body tag.
 
                     A body tag is unique to an html element. As such there can only be one of these tags in each document.
 
-                    The final tag used in the example above is the paragraph tag. It takes the form: &lt;p&gt;
+                    The final tag used in the example above is the paragraph tag.
 
-                    The paragraph tag states that the content inside the tag is intended to be a paragraph. Browsers automatically add a single blank line after a &lt;p&gt; element. 
+                    The paragraph tag (p) states that the content inside the tag is intended to be a paragraph. Browsers automatically add a single blank line after a p element. 
                     The example has some text between these p tags. This means that when the webpage is loaded, the text "Welcome to HTML5!" will be displayed.
 
                     So, if we take the example document above, and load it in our browser, we would get the following web page:

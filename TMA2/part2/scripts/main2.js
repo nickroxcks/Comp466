@@ -8,7 +8,9 @@ var sidebarVisible = false;
 var lessonID = [];
 var globalCurrentLessonID;
 var globalCurrentLessonName;
-// register event handlers for buttons and load XML document
+var currentUsername;
+var currentUserID;
+
 function start() {
     document.getElementById("sidebar").style.display = "none";
     document.getElementById("menubutton").addEventListener(
@@ -19,7 +21,23 @@ function start() {
         "click", clickLessonHomeButton, false);
     document.getElementById("LessonManageButton").addEventListener(
         "click", clickLessonManageButton, false);
-    fetchLessons();
+    
+    //fetch username, and update the page to view the users lessons
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            if (this.responseText != "") {
+                currentUsername = this.responseText;
+                fetchLessons();
+            }
+            else {
+                document.getElementById("Main2-container").innerHTML = "An Error occured fetching data";
+            }
+            //document.getElementById("txtHint").innerHTML = this.responseText;
+        }
+    };
+    xmlhttp.open("GET", "../shared/getUsername.php", true);
+    xmlhttp.send();
 } // end function start
 
 function clickMenuButton() {
@@ -36,13 +54,14 @@ function clickMenuButton() {
 function clickLessonHomeButton() {
     fetchLessons();
 }
+//updates the view to view a list of fetched lessons that are available to the user
 function fetchLessons() {
     lessonID = [];
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             //document.getElementById("lds-dual-ring").style.display = "none"; //make load wheel invisible
-            var strContent = "<div class=\"main2-banner-title\">Courses For You</div>";
+            var strContent = "<div class=\"main2-banner-title\">Welcome " + currentUsername +  ". Courses you have access too:</div>";
             strContent = strContent + "<div id=\"main2-banner-content\">";
             if (this.responseText != "empty") {
                 var tmpArray = this.responseText.split(',');
@@ -86,7 +105,7 @@ function clickLessonManageButton() {
                         strContent = strContent + "<p class=\"main2-banner-content-text-centered\" id=\"L" + tmpArray[i] + "\">" +
                             "<em class=\"selectLesson\" href=\"../Users/U_" + tmpArray[i + 3] + "/L_" + tmpArray[i] + "/index.php\">" +
                             "<a href=\"../Users/U_" + tmpArray[i + 3] + "/L_" + tmpArray[i] + "/index.php\">" + tmpArray[i + 1] + ", Created by " + tmpArray[i + 2] + "</a></em>" +
-                            "<button onclick=\"clickAddUsers(" + tmpArray[i] + "," +"\'"+ tmpArray[i + 1] + "\'" + ")\">Add Users</button>" +
+                            "<button onclick=\"clickAddUsers(" + tmpArray[i] + "," + "\`" + tmpArray[i + 1] + "\`" + ")\">Add Users</button>" +
                             "<button onclick=\"editImages(" + tmpArray[i] + "," + "\'" + tmpArray[i + 1] + "\'" + ")\">Edit Images</button>" +
                             "</p>";
                         //strContent = strContent + "<p class=\"main2-banner-content-text-centered\" id=\"L" + tmpArray[i] + "\">" +
@@ -144,14 +163,14 @@ function sendFile() {
                 var response = this.responseText;
                 if (response == '0') {
                     alert("File not uploaded. Invalid format");
-                } 
-                else if(response=='1'){
+                }
+                else if (response == '1') {
                     alert("File was not able to be uploaded to the server");
                 }
-                else if(response=='2'){
+                else if (response == '2') {
                     alert("Invalid file format. Require at least 1 unit in LessonContent");
                 }
-                else if(response=='3'){
+                else if (response == '3') {
                     alert("Invalid file format. Unknown tag in LessonContent");
                 }
                 else {
@@ -163,7 +182,7 @@ function sendFile() {
                     alert("Lesson has been created! You can upload your images for the lesson now, or do it at a later time!");
                 }
             }
-            else{
+            else {
                 console.log(this.responseText);
             }
         };
@@ -249,12 +268,12 @@ function clickAddUsers(currentLessonID, currentLessonName) {
                 for (let i = 0; i < tmpArray.length; i++) {
                     if (tmpArray[i] != "") {
                         strContent = strContent + "<p class=\"main2-banner-content-text-centered\">" +
-                        tmpArray[i]+"</p>";
+                            tmpArray[i] + "</p>";
                     }
                 }
                 strContent = strContent + "<p class=\"main2-banner-content-text-centered bold\">Enter A Valid Username:</p>";
                 strContent = strContent + "<input type=\"text\" id=\"addUserName\" class=\"loginText\"><br>";
-                strContent = strContent + "<button id=\"addUserSubmit\" class=\"loginText\" onclick=\"clickSubmitAddUser("+currentLessonID+")\">Add</button><br>";
+                strContent = strContent + "<button id=\"addUserSubmit\" class=\"loginText\" onclick=\"clickSubmitAddUser(" + currentLessonID + ")\">Add</button><br>";
                 strContent = strContent + "<p class=\"loginText\" id=\"addUserNotice\"></p>";
                 strContent = strContent + "</div>";
                 document.getElementById("Main2-container").innerHTML = strContent;
@@ -272,7 +291,7 @@ function clickAddUsers(currentLessonID, currentLessonName) {
     xmlhttp.send();
 }
 
-function clickSubmitAddUser(currentLessonID){
+function clickSubmitAddUser(currentLessonID) {
     var username = document.getElementById("addUserName").value;
     console.log("trying to add " + username);
     var xmlhttp = new XMLHttpRequest();
@@ -280,27 +299,27 @@ function clickSubmitAddUser(currentLessonID){
         if (this.readyState == 4 && this.status == 200) {
             console.log("something was recieved");
             if (this.responseText == "success") {
-                document.getElementById("addUserNotice").innerHTML = "<em class=\"greenText\">"+"Username "+username+" has been added to the lesson!</em>";
+                document.getElementById("addUserNotice").innerHTML = "<em class=\"greenText\">" + "Username " + username + " has been added to the lesson!</em>";
                 console.log("suces");
             }
-            else if(this.responseText == "empty") {
-                document.getElementById("addUserNotice").innerHTML = "<em class=\"redText\">"+"Username "+username+ " Does not exist</em>";
+            else if (this.responseText == "empty") {
+                document.getElementById("addUserNotice").innerHTML = "<em class=\"redText\">" + "Username " + username + " Does not exist</em>";
                 console.globalCurrentLessonID("empty");
             }
-            else if(this.responseText == "User Exists"){
-                document.getElementById("addUserNotice").innerHTML = "<em class=\"redText\">"+"Username "+username+ " is already added to lesson</em>";
+            else if (this.responseText == "User Exists") {
+                document.getElementById("addUserNotice").innerHTML = "<em class=\"redText\">" + "Username " + username + " is already added to lesson</em>";
                 console.log("user exists");
             }
-            else{
+            else {
                 document.getElementById("addUserNotice").innerHTML = "<em class=\"redText\">Failed to add User</em>";
                 console.log("failed to add user: " + this.responseText);
             }
         }
         else {
-                //troubeshoot
+            //troubeshoot
         }
     };
-    xmlhttp.open("GET", "scripts/addUser.php?username=" + username+"&lessonID="+currentLessonID, true);
+    xmlhttp.open("GET", "scripts/addUser.php?username=" + username + "&lessonID=" + currentLessonID, true);
     xmlhttp.send();
 }
 
