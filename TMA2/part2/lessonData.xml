@@ -68,7 +68,7 @@
 
             <Page>
                 <Title>Unit 1: Basic HTML elements Part 2</Title>
-                <Image>U1_p2_i1.jpg</Image>
+                <Image>U1_p2_i1.JPG</Image>
                 <Paragraph>
                 
                 
@@ -97,7 +97,7 @@
 
             <Page>
                 <Title>Unit 1: Basic HTML elements Part 3</Title>
-                <Image>U1_p2_i1.jpg</Image>
+                <Image>U1_p2_i1.JPG</Image>
                 <Paragraph>
                     The title tag is another important tag.
 
@@ -117,7 +117,7 @@
 
                     So, if we take the example document above, and load it in our browser, we would get the following web page:
                 </Paragraph>
-                <Image>U1_p4_i1.jpg</Image>
+                <Image>U1_p4_i1.JPG</Image>
                 <Paragraph>Thats it for the basic tags of html! You now have the basic knowledge and understanding to build a simple webpage! When you are ready, you can select the first quiz from 
                 the navigation menu up top.</Paragraph>
             </Page>
@@ -134,9 +134,9 @@
                     The purpose of the styling language CSS is to manipulate the different elements in your html code in order to give them a sense of style. 
                     That is, make the elements look much more appealing. Lets take a look at our previous example in Unit 1.
                 </Paragraph>
-                <Image>U1_p2_i1.jpg</Image>
+                <Image>U1_p2_i1.JPG</Image>
                 <Paragraph>The HTML code above would result in the following webpage when rendered by a browser.</Paragraph>
-                <Image>U1_p4_i1.jpg</Image>
+                <Image>U1_p4_i1.JPG</Image>
                 <Paragraph>As we can see, the text being displayed isn't anything special. It's just plain black text that gets placed on the top left of the webpage by default. 
                     Lets use CSS to make this webpage look nicer.
                 </Paragraph>
@@ -148,13 +148,13 @@
                     This method is generally not reccomended, as it makes it difficult to reuse your styling in other html files. 
                     By today's standards its always reccomended to instead use the second method, which is to place the CSS code in a completely seperate file (.css extension). 
                     Lets create a seperate style.css file and walk through the file contents</Paragraph>
-                <Image>U2_p2_i1.jpg</Image>
+                <Image>U2_p2_i1.JPG</Image>
                 <Paragraph>
                     CSS files contain collections of Selectors and their assigned attributes and values. A Selector allows you to target speciic HTML elements you want to style. 
                     Selectors can take many forms, but in SimpleDev we will only look at a few. In the example above, the selectors used are colored in yellow text. 
                     Each selector can be assigned its own unique properites and values. The image below shows the syntax for a selector and its properites
                 </Paragraph>
-                <Image>U2_p2_i2.jpg</Image>
+                <Image>U2_p2_i2.JPG</Image>
                 <Paragraph>One form a selector can take is that it can be named as a specific HTML element. 
                 In the example above you can see the selectors body and header were used. This means whatever content is inside these html elements will have the properties specified 
                 in the CSS file. In the case of body, the margin and color are specified. The margin property allows us to specify the minimum distance between the given element's 
@@ -177,11 +177,11 @@
                 This link tag will allow us to specify the location of the stylesheet so that the html file can apply the styling. 
                 We will also add a header into the body to give our webpage a nice logo, as well as some text to demonstrate how we can apply our classes.
                 </Paragraph>
-                <Image>U2_p3_i1.jpg</Image>
+                <Image>U2_p3_i1.JPG</Image>
                 <Paragraph>All that needs to be done to apply a class to a html element is assign the elements class attribute to our desired class, as shown above. 
                 With the CSS applied, we know get the following webpage.
                 </Paragraph>
-                <Image>U2_p3_i2.jpg</Image>
+                <Image>U2_p3_i2.JPG</Image>
                 <Paragraph>Notice how the logo is written in white text. Because we have not specified a text color for the header in our CSS, the header automatically takes the 
                 color property of its parent element. In this case, the header text takes on the same color assigned to the body element.
                 </Paragraph>
@@ -215,23 +215,23 @@
                 <Title>Unit 2: Basics of CSS and JavaScript Part 5</Title>
                 <Paragraph>For our last basic Javascript topic, we will learn how to manipulate html elements. Say we use our previous example as before. 
                 The webpage would look like this.</Paragraph>
-                <Image>U2_p3_i2.jpg</Image>
+                <Image>U2_p3_i2.JPG</Image>
                 <Paragraph>Lets say we want to use Javascript to change the text on the screen after the user clicks the header. 
                 We would first need to give our html elements a unique ID. An ID is a unique reference to an html element. 
                 By giving our elements an ID, we can allow our Javascript code to locate the specific html element we wish to change. We can do so like this:
                 </Paragraph>
-                <Image>U2_p5_i1.jpg</Image>
+                <Image>U2_p5_i1.JPG</Image>
                 <Paragraph>Notice the script tage added in the head tag. This will allow us to link our javascript file to our html file. 
                 Now, all we need to do is upate our Javascript code.
                 </Paragraph>
-                <Image>U2_p5_i2.jpg</Image>
+                <Image>U2_p5_i2.JPG</Image>
                 <Paragraph>Walking through the code, we see we have 2 functions, start and clickHeader. On line 15 we say to run the start function as soon as the window is loaded. 
                 Upon loading, the start function finds the mainheader in our html code by referencing its ID, and will listen for when the user clicks the header. 
                 If the header gets clicked, we call the clickHeader function. Once the clickHeader function is called, we locate the paragraphs in our html by locating their ID's, 
                 and insert our new modified html into the paragraphs. In our case, we are just adding new text. With everything in place, our wepage will now change to this whent he 
                 user clicks the header:
                 </Paragraph>
-                <Image>U2_p5_i3.jpg</Image>
+                <Image>U2_p5_i3.JPG</Image>
                 <Paragraph>Thats it for the basic tags of CSS and JavaScript! You now have the basic knowledge and understanding to build a webpage with some style and dynamic 
                 functionality! When you are ready, you can select the second quiz from the navigation menu up top.
                 </Paragraph>
@@ -253,7 +253,7 @@
                 other form of data storage. It makes your website structure cleaner, and increases the reusability of your
                 content. Lets touch on some of the basics of XML
                 </Paragraph>
-                <Image>U3_p1_i1.jpg</Image>
+                <Image>U3_p1_i1.JPG</Image>
                 <Paragraph>
                 We can see XML following a very similar tag structure to that of HTML.
                 Every tag in XML needs a opening and end tag, and every XML document should be declared with the statement shown
@@ -263,7 +263,7 @@
                 you to create chains of tags to clearly define to context of your content. You can also add attributes to
                 further describe your context.
                 </Paragraph>
-                <Image>U3_p1_i2.jpg</Image>
+                <Image>U3_p1_i2.JPG</Image>
             </Page>
             <Page>
                 <Title>Unit 3: Basics of XML and AJAX Part 2</Title>
@@ -276,12 +276,12 @@
                 JavaScript, the DOM acts as an API to allow Javascript to manipulate it. Let's take a look at our html file real
                 quick:
                 </Paragraph>
-                <Image>U3_p2_i1.jpg</Image>
+                <Image>U3_p2_i1.JPG</Image>
                 <Paragraph>
                 You can see we have 2 empty paragraphs with no content. We will use
                 AJAX to gather xml data to fill the paragraph tags with content. Here is our JavaScript file:
                 </Paragraph>
-                <Image>U3_p2_i2.jpg</Image>
+                <Image>U3_p2_i2.JPG</Image>
                 <Paragraph>
                 We can see in the start function the creation of a XMLHttpRequest
                 object. Remeber, the communication between a web server and a client is Asynchronous, as such we will need to
@@ -291,7 +291,7 @@
                 checks in place, we will use the XMLHttpRequest object to open our data XML file and insert the content. With
                 everything in play, we see our webpage is now updated to look like the following:
                 </Paragraph>
-                <Image>U3_p2_i3.jpg</Image>
+                <Image>U3_p2_i3.JPG</Image>
                 <Paragraph>
                 Thats all for the basics of XML and AJAX! You now have the basic
                 knowledge and understanding to build utilizing AJAX! When you are ready, you can select the third quiz from the

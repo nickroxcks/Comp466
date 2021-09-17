@@ -68,18 +68,24 @@
         uploaded, a parser script is run on the server end. This parser script servers 2 purposes. One purspose is to valideate the EML file follows the required format, and the 
         other is to transfrom the EML into a several html files to allow the lesson to be viewed in your browser. If you read the parser code, you will see it will first
         break down each element to see if they are valid and save the data in arrays, and once the format is validated, take all that data and build several html files. The parser
-        will save a folder under the correspoinding User folder following the naming convention L_ID, where ID is the lesson ID descided by the database, and inside this folder
+        will save a folder under the correspoinding User folder following the naming convention L_ID, where ID is the lesson ID decided by the database, and inside this folder
         will contain all the files needed to display the lesson in a browser. I won't go into detail of all the files, but basically every lesson has a index file 
-        built off a basic html template, and then html files for each page and quiz. These page and quiz files get inserted into the index to display the content to the reader.
+        built off a basic html template, and then html files for each page and quiz. These page and quiz html files get inserted into the index file of the lesson
+        to display the content to the reader.
     </p>
     <p class="main2-banner-content-text-centered">
         Thats it for uploading EML. I have provided a sample EML file that will you can use for reference. It is called lessonData.xml and is located inside the part2 folder of
         the assignment.
         After a successful upload, the user is given the option to upload the images for that lesson. They can choose to do this now or later.
-        If they choose to not upload there images, the images will not be displayed when reading the lesson. You can manage the lessons you created by pressing the 
+        If they choose to not upload there images, the images will not be displayed when reading the lesson. NOTE: HTML is case sensitive to the image name/file extension that users
+        specify in there &lt;Image&gt; EML tags. When you upload your images to the server, make sure the 
+        the images you are uploading have the exact same name that you specified in your &lt;Image&gt; tags in your EML. For example, if I have the image "picture.JPG", your EML
+        that uses that image must have that exact name. It cannot be "picture.jpg", it would have to be "picture.JPG" in this case. So please check your file names and extensions.
+    </p>
+    <p class="main2-banner-content-text-centered"></p>
+        You can manage the lessons you created by pressing the 
         manage button in the navigation. Here you have the option to add images you may have forgotten to upload, or you can give users access to your lesson to be viewed.
         All you need to do for this, is click add users, and enter the username of the user you would like to provide access to your lesson. After this, that user will be able 
         to view your lesson. 
     </p>
-    <img class="main2-banner-content-image-centered" src="documentation/addUser.png" />
 </div>

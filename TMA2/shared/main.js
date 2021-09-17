@@ -126,11 +126,16 @@ function clickCreateNewAccountButton() {
         xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 //document.getElementById("lds-dual-ring").style.display = "none"; //make load wheel invisible
+                if(this.responseText == "User Exists"){
+                    document.getElementById("createAccountNotice").innerHTML = "<em class=\"redText\">Username Already Exists</em>";
+                }
+                else{
                 document.getElementById("createAccountNotice").innerHTML = "<em class=\"greenText\">Account Created!</em>";
                 document.getElementById("createUserName").value = "";
                 document.getElementById("createPassword").value = "";
                 document.getElementById("createConfirmPassword").value = "";
                 //document.getElementById("txtHint").innerHTML = this.responseText;
+                }
             }
         };
         xmlhttp.open("GET", "shared/createAccount.php?name=" + name + "&password=" + password, true);
