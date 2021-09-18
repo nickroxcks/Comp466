@@ -52,7 +52,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 				</div>
 				<div class="loginEntry">
 					<p id="loginPasswordLabel" class="loginText">Password:</p>
-					<input id="loginPassword" type="text" class="loginText">
+					<input id="loginPassword" type="password" class="loginText">
 				</div>
 				<div class="buttonContainer">
 					<button id="loginButton" class="loginButton">Login</button>
