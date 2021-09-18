@@ -38,7 +38,7 @@ function getTopTenBookmarks() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             //document.getElementById("lds-dual-ring").style.display = "none"; //make load wheel invisible
-            var strContent = "<div class=\"main2-banner-title\">Top 10 most popular Bookmarks</div>";
+            var strContent = "<div class=\"main2-banner-title\">Welcome! Top 10 most popular Bookmarks</div>";
             strContent = strContent + "<div id=\"main2-banner-content\">";
             if (this.responseText != "") {
                 var tmpArray = this.responseText.split(',');

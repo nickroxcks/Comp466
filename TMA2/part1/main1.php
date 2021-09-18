@@ -51,7 +51,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <!-- Banner -->
                 <section class="main2-banner-container" id="Main2-container">
                     <!--It is here where the content presented can be updated from main2.js-->
-                    <div class="main2-banner-title">Top 10 most popular Bookmarks</div>
+                    <div class="main2-banner-title">Welcome! Top 10 most popular Bookmarks</div>
                     <div id="main2-banner-content">
 
 
