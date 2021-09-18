@@ -14,13 +14,13 @@
             <Page>
                 <Title>Unit 1 Part 1: Clash of the Titans</Title>
                 <Paragraph>Here is a picture of my Clash of the Titans Movie!</Paragraph>
-                <Image>1.jpg</Image>
+                <Image>1.JPG</Image>
             </Page>
 
             <Page>
                 <Title>Unit Part 2: Star Wars</Title>
                 <Paragraph>Here is a picture of my Star Wars Movies!</Paragraph>
-                <Image>14.jpg</Image>
+                <Image>14.JPG</Image>
             </Page>
         </Unit>
         <Unit>
@@ -29,14 +29,14 @@
                 <Paragraph>
                     Here is a picture of my Street Fighter Game
                 </Paragraph>
-                <Image>6.jpg</Image>
+                <Image>6.JPG</Image>
             </Page>
             <Page>
                 <Title>Unit 2 Part 2: Spyro</Title>
                 <Paragraph>
                     Here is a picture of my Spyro game
                 </Paragraph>
-                <Image>12.jpg</Image>
+                <Image>12.JPG</Image>
             </Page>
         </Unit>
     </LessonContent>

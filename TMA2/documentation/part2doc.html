@@ -12,7 +12,8 @@
     the lessons that they have created, or the lessons that other users have created and given access to the current user. All lessons created are tracked inside the 
     MySQL simpledb lessons table. You can click a lesson to open the lesson and view it in your browser. The lesson should have a yellow navigation when opened to give you a indication
     you are reading a lesson. Note for the sample users provided, if you choose to open their lessons I deliberately added a mistake with a couple of the images to show you 
-    what happens when you enter an image name incorrectly and the browser cant load the image.
+    what happens when you enter an image name incorrectly and the browser cannot load the image. I used the same HTML/CSS/JS/AJAX course that was made in assignment 1. I also 
+    made a small second lesson that is simply a display of movies and games with a small quiz, just to demonstrate you can do more then just teach lessons with this program. 
     <img class="main2-banner-content-image-centered" src="documentation/lessons.png" />
 
     <p class="main2-banner-content-text-centered">
@@ -81,8 +82,15 @@
         specify in there &lt;Image&gt; EML tags. When you upload your images to the server, make sure the 
         the images you are uploading have the exact same name that you specified in your &lt;Image&gt; tags in your EML. For example, if I have the image "picture.JPG", your EML
         that uses that image must have that exact name. It cannot be "picture.jpg", it would have to be "picture.JPG" in this case. So please check your file names and extensions.
+
     </p>
-    <p class="main2-banner-content-text-centered"></p>
+    <p class="main2-banner-content-text-centered">
+        IMPORTANT: PLEASE LIMIT YOUR IMAGE SIZES TO JUST A FEW MB OR LESS. Unfortunately there is only so much I can do with free hositing software. Since no web hosting service was provided
+        for us in this assignment, this was the best I could do. If your images are taking a while to upload, they might get rejected from the webserver. I've 
+        tried to set alert messages to notify the user if the image fails to upload but sometimes the server is so slow you don't be able to see an alert for 
+        a while. In my examples, the image sizes were all under 1MB and no issues were found.  
+    </p>
+    <p class="main2-banner-content-text-centered">
         You can manage the lessons you created by pressing the 
         manage button in the navigation. Here you have the option to add images you may have forgotten to upload, or you can give users access to your lesson to be viewed.
         All you need to do for this, is click add users, and enter the username of the user you would like to provide access to your lesson. After this, that user will be able 
