@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Lesson>
+    <LessonName>Sylvias DVD Showcase</LessonName>
+    <Author>Sylvia Serrano</Author>
+    <Introduction>
+        <Title>Welcome to My Movies and Game showcase!</Title>
+        <Paragraph>
+            In this program, you will be introduced to some
+            some of my movies and video games collections!
+        </Paragraph>
+    </Introduction>
+    <LessonContent>
+        <Unit>
+            <Page>
+                <Title>Unit 1 Part 1: Clash of the Titans</Title>
+                <Paragraph>Here is a picture of my Clash of the Titans Movie!</Paragraph>
+                <Image>1.jpg</Image>
+            </Page>
+
+            <Page>
+                <Title>Unit Part 2: Star Wars</Title>
+                <Paragraph>Here is a picture of my Star Wars Movies!</Paragraph>
+                <Image>14.jpg</Image>
+            </Page>
+        </Unit>
+        <Unit>
+            <Page>
+                <Title>Unit 2 Part 1: Street Fighter</Title>
+                <Paragraph>
+                    Here is a picture of my Street Fighter Game
+                </Paragraph>
+                <Image>6.jpg</Image>
+            </Page>
+            <Page>
+                <Title>Unit 2 Part 2: Spyro</Title>
+                <Paragraph>
+                    Here is a picture of my Spyro game
+                </Paragraph>
+                <Image>12.jpg</Image>
+            </Page>
+        </Unit>
+    </LessonContent>
+    <Quiz>
+        <Unit>
+            <MultipleChoice>
+                <Question>Which of the follwing was the first movie showcased?</Question>
+                <A>Clash of the Titans</A>
+                <B>Marvels Avengers: EndGame</B>
+                <C>Trailer Park Boys The Movie</C>
+                <D>Straight out of Compton</D>
+                <Answer>A</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the was following was the second movie showcased?</Question>
+                <A>Clash of the Titans</A>
+                <B>Marvels Avengers: EndGame</B>
+                <C>Trailer Park Boys The Movie</C>
+                <D>Star Wars</D>
+                <Answer>D</Answer>
+            </MultipleChoice>
+        </Unit>
+
+        <Unit>
+            <MultipleChoice>
+                <Question>Which of the follwing was the second game showcased?</Question>
+                <A>Street Fighter IV</A>
+                <B>Spyro</B>
+                <C>Apex Legends</C>
+                <D>Call of Duty Modern Warfare</D>
+                <Answer>B</Answer>
+            </MultipleChoice>
+
+            <MultipleChoice>
+                <Question>Which of the following was the first game showcased?</Question>
+                <A>Street Fighter IV</A>
+                <B>Spyro</B>
+                <C>Apex Legends</C>
+                <D>Call of Duty Modern Warfare</D>
+                <Answer>A</Answer>
+            </MultipleChoice>
+        </Unit>
+    </Quiz>
+</Lesson>

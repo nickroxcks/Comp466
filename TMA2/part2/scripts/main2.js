@@ -184,6 +184,7 @@ function sendFile() {
             }
             else {
                 console.log(this.responseText);
+                alert("File not uploaded. Most likely invalid file format");
             }
         };
 
