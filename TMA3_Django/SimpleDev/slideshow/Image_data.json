@@ -1,0 +1,84 @@
+{
+    "images": [
+        {
+            "caption": "Clash of the titans",
+            "imageUrl": "slideshow/1.jpg'"
+        },
+        {
+            "caption": "Street Fighter Anniversary Collection",
+            "imageUrl": "{% static 'slideshow/2.jpg' %}"
+        },
+        {
+            "caption": "The Pink Panther",
+            "imageUrl": "{% static 'slideshow/3.jpg' %}"
+        },
+        {
+            "caption": "Ambient Fire",
+            "imageUrl": "{% static 'slideshow/4.jpg' %}"
+        },
+        {
+            "caption": "Percy Jackson and the Olympians",
+            "imageUrl": "{% static 'slideshow/5.jpg' %}"
+        },
+        {
+            "caption": "Street Fighter IV",
+            "imageUrl": "{% static 'slideshow/6.jpg' %}"
+        },
+        {
+            "caption": "Call of Duty Advanced Warfare",
+            "imageUrl": "{% static 'slideshow/7.jpg' %}"
+        },
+        {
+            "caption": "Call of Duty World at War",
+            "imageUrl": "{% static 'slideshow/8.jpg' %}"
+        },
+        {
+            "caption": "Transformers the Movie",
+            "imageUrl": "{% static 'slideshow/9.jpg' %}"
+        },
+        {
+            "caption": "Uncharted 2 Among Thieves",
+            "imageUrl": "{% static 'slideshow/10.jpg' %}"
+        },
+        {
+            "caption": "Call of Duty Modern Warfare 3",
+            "imageUrl": "{% static 'slideshow/11.jpg' %}"
+        },
+        {
+            "caption": "Spyro Reignited Trilogy",
+            "imageUrl": "{% static 'slideshow/12.jpg' %}"
+        },
+        {
+            "caption": "Final Fantasy Vii Remake Deluxe Edition",
+            "imageUrl": "{% static 'slideshow/13.jpg' %}"
+        },
+        {
+            "caption": "Star Wars The Complete Saga",
+            "imageUrl": "{% static 'slideshow/14.jpg' %}"
+        },
+        {
+            "caption": "Final Fantasy XII, The Zodiac Age",
+            "imageUrl": "{% static 'slideshow/15.jpg' %}"
+        },
+        {
+            "caption": "Call of Duty World at War PS3",
+            "imageUrl": "{% static 'slideshow/16.jpg' %}"
+        },
+        {
+            "caption": "Final Fantasy XIII",
+            "imageUrl": "{% static 'slideshow/17.jpg' %}"
+        },
+        {
+            "caption": "Destiny 2",
+            "imageUrl": "{% static 'slideshow/18.jpg' %}"
+        },
+        {
+            "caption": "Metal Gear Solid V: Phantom Pain",
+            "imageUrl": "{% static 'slideshow/19.jpg' %}"
+        },
+        {
+            "caption": "Shadow of the Colossus",
+            "imageUrl": "{% static 'slideshow/20.jpg' %}"
+        }
+    ]
+}

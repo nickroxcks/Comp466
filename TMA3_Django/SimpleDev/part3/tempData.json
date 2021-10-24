@@ -1,0 +1,246 @@
+{
+    "computers": [
+        {
+            "id": 1,
+            "name": "AlienWear Mighty",
+            "price": 6999.99,
+            "cpu": 1,
+            "graphicsCard": 2,
+            "hardDrive": 2,
+            "ram": 2,
+            "os": 1,
+            "display": 1,
+            "soundCard": 3   
+        },
+        {
+            "id": 2,
+            "name": "Razer All Inclusive",
+            "price": 6999.99,
+            "cpu": 2,
+            "graphicsCard": 1,
+            "hardDrive": 2,
+            "ram": 2,
+            "os": 3,
+            "display": 1,
+            "soundCard": 1   
+        },
+        {
+            "id": 3,
+            "name": "The Nick 3000",
+            "price": 6999.99,
+            "cpu": 3,
+            "graphicsCard": 1,
+            "hardDrive": 2,
+            "ram": 2,
+            "os": 1,
+            "display": 1,
+            "soundCard": 1   
+        },
+        {
+            "id": 4,
+            "name": "HP Desktop",
+            "price": 6999.99,
+            "cpu": 4,
+            "graphicsCard": 1,
+            "hardDrive": 2,
+            "ram": 2,
+            "os": 1,
+            "display": 1,
+            "soundCard": 1   
+        },
+        {
+            "id": 5,
+            "name": "The Nick 5000",
+            "price": 6999.99,
+            "cpu": 3,
+            "graphicsCard": 1,
+            "hardDrive": 2,
+            "ram": 2,
+            "os": 1,
+            "display": 1,
+            "soundCard": 1   
+        },
+        {
+            "id": 6,
+            "name": "AlienWear Max",
+            "price": 6999.99,
+            "cpu": 2,
+            "graphicsCard": 1,
+            "hardDrive": 2,
+            "ram": 2,
+            "os": 1,
+            "display": 1,
+            "soundCard": 1   
+        }
+    ],
+    "cpu": [
+        {
+            "id": 1,
+            "name": "Intel Core i9-7900X",
+            "price": 599.99,
+            "description": "A powerful high end CPU, up to 2.60 GHZ"
+        },
+        {
+            "id": 2,
+            "name": "Intel Core i9-7920X",
+            "price": 699.99,
+            "description": "A powerful high end CPU, up to 2.80 GHZ"
+        },
+        {
+            "id": 3,
+            "name": "Intel Core i9-7960X",
+            "price": 999.99,
+            "description": "A powerful high end CPU, up to 2.90 GHZ"
+        },
+        {
+            "id": 4,
+            "name": "Ryzen Threadrip 1959X",
+            "price": 1999.99,
+            "description": "One of the highest end CPUs on the markect, up to 3.4 GHZ"
+        }
+    ],
+    "graphicsCard": [
+        {
+            "id": 1,
+            "name": "Nvidia GeForce RTX 3090",
+            "price": 3999.99,
+            "description": "One of Nvidias highest end GPUs. 1400/1695 MHz, 24GB GDDR6X"
+        },
+        {
+            "id": 2,
+            "name": "Nvidia GeForce RTX 3080 Ti",
+            "price": 2999.99,
+            "description": "One of Nvidias highest end GPUs. 1370/1665 MHz, 12GB GDDR6X"
+        },
+        {
+            "id": 3,
+            "name": "Nvidia GeForce RTX 2070 Super",
+            "price": 999.99,
+            "description": "A mid tier modern end GPU. 1605/1770 MHz, 8GB GDDR6"
+        },
+        {
+            "id": 4,
+            "name": "Nvidia GeForce RTX 2060 Super",
+            "price": 899.99,
+            "description": "A mid tier modern end GPU. 1600/1700 MHz, 8GB GDDR6"
+        },
+        {
+            "id": 5,
+            "name": "Nvidia GeForce RTX 2000 Super",
+            "price": 799.99,
+            "description": "A mid tier modern end GPU. 1500/1600 MHz, 8GB GDDR6"
+        },
+        {
+            "id": 6,
+            "name": "Nvidia Poor RTX 1",
+            "price": 9.99,
+            "description": "The lowest tier GPU. 10/10 MHz, 500MB GDDR6"
+        }
+    ],
+    "hardDrive": [
+        {
+            "id": 1,
+            "name": "250GB HDD",
+            "price": 79.99,
+            "description": "Small HDD. Slow, with little memory"
+        },
+        {
+            "id": 2,
+            "name": "1TB HDD",
+            "price": 399.99,
+            "description": "Large HDD. Slow, with high memory"
+        },
+        {
+            "id": 3,
+            "name": "1TD SSD",
+            "price": 499.99,
+            "description": "Large SDD. Fast, with high memory."
+        }
+    ],
+    "ram": [
+        {
+            "id": 1,
+            "name": "4GB",
+            "price": 99.99,
+            "description": "Useful for basic PCs."
+        },
+        {
+            "id": 2,
+            "name": "8GB",
+            "price": 299.99,
+            "description": "Multipurpose. Good for gaming, multitasking, and multiple tasks"
+        },
+        {
+            "id": 3,
+            "name": "16GB",
+            "price": 799.99,
+            "description": "Multipurpose. Good for gaming, multitasking, and multiple tasks. Very High End"
+        }
+    ],
+    "os": [
+        {
+            "id": 1,
+            "name": "Windows Vista",
+            "price": 2.99,
+            "description": "Good for nothing OS"
+        },
+        {
+            "id": 2,
+            "name": "Linux",
+            "price": 0,
+            "description": "Free, and very versatile"
+        },
+        {
+            "id": 3,
+            "name": "Apple",
+            "price": 699.99,
+            "description": "Expenssive but very popular OS"
+        }
+    ],
+    "display": [
+        {
+            "id": 1,
+            "name": "Nicks 60hz Monitor",
+            "price": 199.99,
+            "description": "Great montior manufatured by Nick himself"
+        },
+        {
+            "id": 2,
+            "name": "Samsung 266FG 60hz Monitor",
+            "price": 299.99,
+            "description": "LGreat monitor for simple tasks."
+        },
+        {
+            "id": 3,
+            "name": "Nicks ultimate 288hz 8K Gaming Monitor",
+            "price": 9999.99,
+            "description": "The best monitor in the world. Can do anything for you"
+        },
+        {
+            "id": 4,
+            "name": "Samsun 25FG 1hz Monitor",
+            "price": 9.99,
+            "description": "Not recceomonded for any tasks besides displaying static images"
+        }
+    ],
+    "soundCard": [
+        {
+            "id": 1,
+            "name": "Asus Xonar AE",
+            "price": 199.99,
+            "description": "Fantastic all around sound card for any task"
+        },
+        {
+            "id": 2,
+            "name": "Audioengine D1 24-Bit DAC",
+            "price": 299.99,
+            "description": "Great all around sound card for any task"
+        },
+        {
+            "id": 3,
+            "name": "AudioQuest",
+            "price": 99.99,
+            "description": "LowerEnd, but gets the job done"
+        }
+    ]
+}

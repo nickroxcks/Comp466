@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src={% static 'part4/contact.js' %}></script>
+    <title>Nicholas Serrano Assignment 3 part 4 contact us</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="main2_center">
+
+                <!-- Header -->
+                <header id="header">
+                    <div class="fas nav_button" id="menubutton"> <img src="{% static 'part4/logo.png' %}" style="width:100px;height:100px;"></div>
+                    <div class="fas nav_button" id="HomeButton"><a class="nav_button" href="../part4/">Home</a></div>
+                    <div class="fas nav_button" id="ComputersButton"><a class="nav_button" href="computers/">Computers</a></div>
+                    <div class="fas nav_button" id="PartsButton"><a class="nav_button" href="parts/">Parts</a></div>
+                    <div class="fas nav_button" id="CartButton"><a class="nav_button" href="cart/">Cart</a></div>
+                    <div class="fas nav_button" id="ContactButton">Contact</div>
+
+                </header>
+
+                <!-- Banner -->
+                <section class="main2-banner-container" id="Main2-container">
+                    <!--It is here where the content presented can be updated from main2.js-->
+                    <div class="main2-banner-title">We would love to hear from you!</div>
+                    <div id="main2-banner-content">
+                        <p class="main2-banner-content-text-centered">Name:</p>
+                        <input type="text" id="contactName" class="loginText">
+                        <p class="main2-banner-content-text-centered">Email:</p>
+                        <input type="text" id="contactEmail" class="loginText">
+                        <p class="main2-banner-content-text-centered">Feedback:</p>
+                        <input type="text" id="contactFeedback" class="loginText" style="width: 500px; height: 200px;">
+                        <button id="contactSubmit" class="loginText" onlick="clickContactSubmitButton()">Submit</button>
+                        <p></p>
+                        <p class="loginText" id="contactNotification"></p>
+
+                    </div>
+                    <!--End of content update-->
+                </section>
+
+                <div class="main2-banner-content-page-navigation" id="Main2-Page-Navigation">
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar" style="display: none;">
+            <div class="inner_sidebar">
+                <!-- Menu -->
+                <nav id="menu">
+                    <ul>
+                        <li><a href="http://localhost:8000/">Documentation</a></li>
+                        <li><a href="http://localhost:8000/checkVisit/">Part 1 Check Visits</a></li>
+                        <li><a href="http://localhost:8000/slideshow/">Part 2 SlideShow</a></li>
+                        <li><a href="http://localhost:8000/part3/">Part 3 Computer Store</a></li>
+                        <li><a href="http://localhost:8000/part4/">Part 4 Computer Store</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
