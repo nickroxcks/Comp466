@@ -5,7 +5,7 @@ function start() {
 
 function clickGetPartsButton(){
     var currentPart = document.getElementById("parts_select").value;
-    const url =  new URL(`http://localhost:8000/part3/command/getParts/`)
+    const url =  new URL(`http://143.198.71.129:8000/part3/command/getParts/`)
     $.getJSON(url, function (json) {
         jsonData = json[currentPart];
         buildUI(jsonData,currentPart);
