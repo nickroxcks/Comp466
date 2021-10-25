@@ -164,18 +164,6 @@ function customize(itemID){
     addSelectListener("SoundCard",currComputer);
 }
 
-//use the partType specific in the json
-/*
-                        <select class="main2-banner-content-text-centered" id="parts_select">
-                            <option value="cpu">CPU</option>
-                            <option value="graphicsCard">Graphics Card</option>
-                            <option value="ram">Ram</option>
-                            <option value="hardDrive">Hard Drives</option>
-                            <option value="os">OS</option>
-                            <option value="display">Display</option>
-                            <option value="soundCard">Sound Cards</option>
-                        </select>
-*/
 function buildSelect(partType, currentPart){
     var partData;
 
@@ -357,29 +345,5 @@ function getCookie(cname) {
 function deleteCookie(name) {   
     document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; 
 }
-
-function incrementCounter () {
-    const cookie = getCookie('counter')
-    if (cookie) {
-        const counterEl = document.getElementById('counter')
-        const newVal = parseInt(cookie) + 1
-        counterEl.innerText = newVal
-        setCookie('counter', newVal, 365)
-    } else {
-        setCookie('counter', 0, 365)
-    }
-}
-
-function getIp () {
-    fetch('https://api.ipify.org/?format=json')
-        .then(resp => resp.json())
-        .then(data => document.getElementById('ip').innerText = data.ip)
-}
-
-function getTimezone () {
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
-    document.getElementById('timezone').innerText = tz
-}  
-
 
 window.addEventListener("load", start, false);

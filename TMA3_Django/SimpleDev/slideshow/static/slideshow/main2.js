@@ -43,23 +43,22 @@ function start() {
             console.log(jsonData[i].caption)
             console.log(jsonData[i].imageUrl)
         }
-        document.getElementById("loadingMessage").style.display = "none";
         updateButtons();
     });
 
 } // end function start
 
-async function getImage (i) {
+async function getImage(i) {
     try {
-        const blob = await download(i)
+        const blob = await downloadImage(i)
     } catch (err) {
         console.log(err)
         alert('Error on server getting image')
     }
 }
 
-async function download (i) {
-    console.log("getting" + i)
+async function downloadImage(i) {
+    //console.log("getting" + i)
     const url =  new URL(`http://143.198.71.129:8000/slideshow/command/getImage/${i}/`)
     const resp = await fetch(url, {
         method: 'GET'
@@ -246,6 +245,7 @@ function updateButtons() {
     //once all images loaded, make the button visible. This is in case start is hit before images loaded
     numImagesLoaded = numImagesLoaded + 1;
     if (numImagesLoaded == jsonData.length) {
+        document.getElementById("loadingMessage").style.display = "none";
         document.getElementById("Main2-Page-Navigation").style.display = "block";
         document.getElementById("Main3StartStopButton").addEventListener("click",
             clickStartStop, false);

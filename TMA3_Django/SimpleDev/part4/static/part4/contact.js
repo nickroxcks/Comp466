@@ -15,16 +15,7 @@ function clickMenuButton() {
         sidebarVisible = false;
     }
 }
-/*
-<p class="main2-banner-content-text-centered">Name:</p>
-                        <input type="text" id="contactName" class="loginText">
-                        <p class="main2-banner-content-text-centered">Email:</p>
-                        <input type="text" id="contactEmail" class="loginText">
-                        <p class="main2-banner-content-text-centered">Feedback:</p>
-                        <input type="text" id="contactFeedback" class="loginText" style="width: 500px; height: 200px;">
 
-
-*/
 function clickContactSubmitButton(){
     document.getElementById("contactName").value = "";
     document.getElementById("contactEmail").value = "";

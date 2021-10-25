@@ -56,7 +56,8 @@
                             forums Django was an acceptable framework for this assignment, and I had a lot of fun learning it</p>
                             <p class="main2-banner-content-text-centered">
                             Starting from the left side of the diagram, the client (you) will connect to the web server via http through the ip address of the server. 
-                            All the user needs to do is enter the URL ENTERIPADRESS in their webrowser in order to access this web application. 
+                            All the user needs to do is enter the URL http://143.198.71.129:8000/ in their webrowser in order to access this web application. The entire 
+                            application is being run on port 8000. This webserver is used for various other projects of mine, so you must specify the port in the url when you first connect.
                             Note, all browser testing for this assignment was done using google chrome and firefox. I have not tested compatability on other browsers. 
                             I did not want to set a domain name for this website being that it is a smallscale website used only for the purposes for this course, so for now please connect using IP. </p>
                         
@@ -73,7 +74,7 @@
                             Each app folder (home, checkVisit, slideShow, part3, and part4) contains folders related to each app. When you the client wishes to connect to an app, 
                             Django will look insde the related app folder to fetch the relevant files required to run the app. Every app folder has a static folder, where static files such as scripts and images
                             are located,a template folder where all the html files for an app are located, a urls.py file where all the urls relevant to the app are contained, and a views folder which tell
-                            Django what to do when the you the client sends a url to the server. For instance, if I enter the url ENTERIPADRESS/part4/, django will recieve the get request and look
+                            Django what to do when the you the client sends a url to the server. For instance, if I enter the url http://143.198.71.129:8000/part4/, django will recieve the get request and look
                             in the urls.py file inside the part4 app folder. From there it will look for instructions what to do with that URL. In this case, Django will run the index view, which from there 
                             will render the part 4 index html file. 
                          </p>
@@ -99,11 +100,11 @@
                 <!-- Menu -->
                 <nav id="menu">
                     <ul>
-                        <li><a href="http://143.198.71.129/">Documentation</a></li>
-                        <li><a href="http://143.198.71.129/checkVisit/">Part 1 Check Visits</a></li>
-                        <li><a href="http://143.198.71.129/slideshow/">Part 2 SlideShow</a></li>
-                        <li><a href="http://143.198.71.129/part3/">Part 3 Computer Store</a></li>
-                        <li><a href="http://143.198.71.129/part4/">Part 4 Computer Store</a></li>
+                        <li><a href="http://143.198.71.129:8000/">Documentation</a></li>
+                        <li><a href="http://143.198.71.129:8000/checkVisit/">Part 1 Check Visits</a></li>
+                        <li><a href="http://143.198.71.129:8000/slideshow/">Part 2 SlideShow</a></li>
+                        <li><a href="http://143.198.71.129:8000/part3/">Part 3 Computer Store</a></li>
+                        <li><a href="http://143.198.71.129:8000/part4/">Part 4 Computer Store</a></li>
                     </ul>
                 </nav>
 
