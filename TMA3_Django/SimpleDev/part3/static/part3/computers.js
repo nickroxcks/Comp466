@@ -22,7 +22,7 @@ function start() {
 } // end function start
 
 function getComputersJson(){
-    const url =  new URL(`http://localhost:8000/part3/command/getParts/`)
+    const url =  new URL(`http://143.198.71.129:8000/part3/command/getParts/`)
     $.getJSON(url, function (json) {
         //jsonData = json[currentPart];
         console.log(json["graphicsCard"][0].name);

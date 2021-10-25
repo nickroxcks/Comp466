@@ -23,7 +23,7 @@ function start() {
 } // end function start
 
 function getComputersJson(){
-    const url =  new URL(`http://localhost:8000/part4/command/getParts/`)
+    const url =  new URL(`http://143.198.71.129:8000/part4/command/getParts/`)
     $.getJSON(url, function (json) {
         //jsonData = json[currentPart];
         computerJson = json["computers"];
@@ -39,7 +39,7 @@ function getComputersJson(){
     });
 }
 function getCart(){
-    const url =  new URL(`http://localhost:8000/part4/command/getCart/`)
+    const url =  new URL(`http://143.198.71.129:8000/part4/command/getCart/`)
     $.getJSON(url, function (json) {
         //jsonData = json[currentPart];
         cartJson = json["cart"]
@@ -125,7 +125,7 @@ async function deleteItem(cartID){
 
 const deleteCartDB = async (cartID) => {
     
-    const url = new URL(`http://localhost:8000/part4/command/deleteCart/`)
+    const url = new URL(`http://143.198.71.129:8000/part4/command/deleteCart/`)
     url.searchParams.append('cartID', cartID)
 
     const resp = await fetch(url)

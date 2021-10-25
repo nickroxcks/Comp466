@@ -1,5 +1,4 @@
 var sidebarVisible = false;
-const SERVER_URL = 'http://localhost:8000'
 function start() {
 
     document.querySelector('#loginButton').addEventListener('click', async () => {
@@ -20,7 +19,7 @@ function start() {
 } // end function start
 
 const login = async (username, password) => {
-    const url = new URL(`${SERVER_URL}/part4/command/auth/login/`)
+    const url = new URL(`http://143.198.71.129:8000/part4/command/auth/login/`)
     url.searchParams.append('username', username)
     url.searchParams.append('password', password)
     const resp = await fetch(url)

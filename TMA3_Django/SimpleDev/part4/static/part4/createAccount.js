@@ -1,6 +1,4 @@
 var sidebarVisible = false;
-const SERVER_URL = 'http://localhost:8000'
-
 
 const validateEmail = (email) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -34,7 +32,7 @@ function start() {
 } // end function start
 
 const createUser = async (params) => {
-    const url = new URL(`${SERVER_URL}/part4/command/auth/createUser/`)
+    const url = new URL(`http://143.198.71.129:8000/part4/command/auth/createUser/`)
     const resp = await fetch(url, {
         method: 'POST',
         type: 'application/json',

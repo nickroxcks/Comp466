@@ -22,7 +22,7 @@ function start() {
 } // end function start
 
 function getComputersJson(){
-    const url =  new URL(`http://localhost:8000/part4/command/getParts/`)
+    const url =  new URL(`http://143.198.71.129:8000/part4/command/getParts/`)
     $.getJSON(url, function (json) {
         //jsonData = json[currentPart];
         //console.log(json["graphicsCard"][0].name);
@@ -100,7 +100,7 @@ async function addTocart(itemID){
 
 const addCartDB = async (computerID,cpuID,graphicsID,hardDriveID,ramID,osID,displayID,soundCardID) => {
     
-    const url = new URL(`http://localhost:8000/part4/command/addCart/`)
+    const url = new URL(`http://143.198.71.129:8000/part4/command/addCart/`)
     url.searchParams.append('computerID', computerID)
     url.searchParams.append('cpuID', cpuID)
     url.searchParams.append('graphicsCardID', graphicsID)
