@@ -23,7 +23,7 @@ function start() {
 
     document.getElementById("sidebar").style.display = "none";
     document.getElementById("menubutton").addEventListener("click",clickMenuButton,false);
-    $.getJSON("http://localhost:8000/slideshow/command/getJson/", function (json) {
+    $.getJSON("command/getJson/", function (json) {
         jsonData = json['images'];
         //canvas = document.getElementById("drawSlideShow");
         canvas = document.getElementById('drawSlideShow');
@@ -60,7 +60,7 @@ async function getImage (i) {
 
 async function download (i) {
     console.log("getting" + i)
-    const url =  new URL(`http://localhost:8000/slideshow/command/getImage/${i}/`)
+    const url =  new URL(`command/getImage/${i}/`)
     const resp = await fetch(url, {
         method: 'GET'
     })
