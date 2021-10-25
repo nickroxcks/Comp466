@@ -69,7 +69,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 # Cors
-ALLOWED_HOSTS = ['http://143.198.71.129/']
+ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'SimpleDev.urls'
