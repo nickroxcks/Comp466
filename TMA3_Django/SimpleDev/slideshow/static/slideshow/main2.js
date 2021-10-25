@@ -20,7 +20,6 @@ var sidebarVisible = false;
 
 //Pre load json data via jquery.
 function start() {
-    document.getElementById("lds-dual-ring").style.display = "inline-block";
     document.getElementById("sidebar").style.display = "none";
     document.getElementById("menubutton").addEventListener("click",clickMenuButton,false);
     $.getJSON("http://143.198.71.129:8000/slideshow/command/getJson/", function (json) {
@@ -44,7 +43,7 @@ function start() {
             console.log(jsonData[i].caption)
             console.log(jsonData[i].imageUrl)
         }
-        document.getElementById("lds-dual-ring").style.display = "none";
+        document.getElementById("loadingMessage").style.display = "none";
         updateButtons();
     });
 
